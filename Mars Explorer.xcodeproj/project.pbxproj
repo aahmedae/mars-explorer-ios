@@ -99,13 +99,10 @@
 		C39EEDEA1F34A53A00537227 /* Mars Explorer */ = {
 			isa = PBXGroup;
 			children = (
-				C39EEDEB1F34A53A00537227 /* AppDelegate.swift */,
-				C39EEDED1F34A53A00537227 /* MasterViewController.swift */,
-				C39EEDEF1F34A53A00537227 /* DetailViewController.swift */,
-				C39EEDF11F34A53A00537227 /* Main.storyboard */,
-				C39EEDF41F34A53A00537227 /* Assets.xcassets */,
-				C39EEDF61F34A53A00537227 /* LaunchScreen.storyboard */,
-				C39EEDF91F34A53A00537227 /* Info.plist */,
+				C39EEE1C1F34A56A00537227 /* View */,
+				C39EEE1E1F34A58200537227 /* Controller */,
+				C39EEE1D1F34A57200537227 /* Assets */,
+				C39EEE1B1F34A55400537227 /* Supporting Files */,
 			);
 			path = "Mars Explorer";
 			sourceTree = "<group>";
@@ -126,6 +123,41 @@
 				C39EEE0F1F34A53A00537227 /* Info.plist */,
 			);
 			path = "Mars ExplorerUITests";
+			sourceTree = "<group>";
+		};
+		C39EEE1B1F34A55400537227 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C39EEDEB1F34A53A00537227 /* AppDelegate.swift */,
+				C39EEDF91F34A53A00537227 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C39EEE1C1F34A56A00537227 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C39EEE1D1F34A57200537227 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C39EEDF41F34A53A00537227 /* Assets.xcassets */,
+				C39EEDF61F34A53A00537227 /* LaunchScreen.storyboard */,
+				C39EEDF11F34A53A00537227 /* Main.storyboard */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		C39EEE1E1F34A58200537227 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C39EEDED1F34A53A00537227 /* MasterViewController.swift */,
+				C39EEDEF1F34A53A00537227 /* DetailViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

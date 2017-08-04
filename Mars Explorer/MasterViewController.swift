@@ -8,8 +8,8 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
-
+class MasterViewController: UITableViewController
+{
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
 
@@ -59,7 +59,8 @@ class MasterViewController: UITableViewController {
 
     // MARK: - Table View
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int
+    {
         return 1
     }
 
