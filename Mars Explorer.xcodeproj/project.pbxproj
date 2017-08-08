@@ -7,13 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C31BDF821F35F8500011AD8D /* venus rising rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF811F35F8500011AD8D /* venus rising rg.ttf */; };
+		C31BDF841F35F85F0011AD8D /* nasalization-rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF831F35F85F0011AD8D /* nasalization-rg.ttf */; };
+		C31BDF871F376B990011AD8D /* sputnik-beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF861F376B990011AD8D /* sputnik-beep.mp3 */; };
+		C31BDF8A1F376BCC0011AD8D /* hawquindar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF881F376BCC0011AD8D /* hawquindar.mp3 */; };
+		C31BDF8B1F376BCC0011AD8D /* hskquindar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF891F376BCC0011AD8D /* hskquindar.mp3 */; };
+		C31BDF8D1F376C540011AD8D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF8C1F376C540011AD8D /* HomeViewController.swift */; };
+		C31BDF8F1F3777610011AD8D /* SciFiActivitySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF8E1F3777610011AD8D /* SciFiActivitySpinner.swift */; };
+		C31BDF921F386E7B0011AD8D /* WebRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF911F386E7B0011AD8D /* WebRequest.swift */; };
+		C31BDF941F386EE80011AD8D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF931F386EE80011AD8D /* SwiftyJSON.swift */; };
+		C31BDF961F3891020011AD8D /* WebRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF951F3891020011AD8D /* WebRequestTests.swift */; };
+		C31BDF991F3898700011AD8D /* NASADataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF981F3898700011AD8D /* NASADataAPI.swift */; };
+		C31BDF9C1F38C36A0011AD8D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF9B1F38C36A0011AD8D /* Models.swift */; };
+		C31BDF9E1F38CD1F0011AD8D /* NASADataAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF9D1F38CD1F0011AD8D /* NASADataAPITests.swift */; };
+		C31BDFA01F38D2B20011AD8D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF9F1F38D2B20011AD8D /* Extensions.swift */; };
+		C31BDFA21F38D34F0011AD8D /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDFA11F38D34F0011AD8D /* UIConstants.swift */; };
+		C31BDFA41F38D6A00011AD8D /* ui_select.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C31BDFA31F38D6A00011AD8D /* ui_select.mp3 */; };
+		C31BDFA61F38D8630011AD8D /* film_static.wav in Resources */ = {isa = PBXBuildFile; fileRef = C31BDFA51F38D8630011AD8D /* film_static.wav */; };
+		C31BDFA81F38D9CC0011AD8D /* space_ambience.wav in Resources */ = {isa = PBXBuildFile; fileRef = C31BDFA71F38D9CC0011AD8D /* space_ambience.wav */; };
+		C382EDAD1F3A137E00F7899C /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382EDAC1F3A137E00F7899C /* ViewBuilder.swift */; };
+		C382EDAF1F3A226500F7899C /* ViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382EDAE1F3A226500F7899C /* ViewAnimator.swift */; };
+		C382EDB31F3A3A0E00F7899C /* SoundEffectPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382EDB21F3A3A0E00F7899C /* SoundEffectPlayer.swift */; };
 		C39EEDEC1F34A53A00537227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EEDEB1F34A53A00537227 /* AppDelegate.swift */; };
-		C39EEDEE1F34A53A00537227 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EEDED1F34A53A00537227 /* MasterViewController.swift */; };
-		C39EEDF01F34A53A00537227 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EEDEF1F34A53A00537227 /* DetailViewController.swift */; };
 		C39EEDF31F34A53A00537227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39EEDF11F34A53A00537227 /* Main.storyboard */; };
 		C39EEDF51F34A53A00537227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39EEDF41F34A53A00537227 /* Assets.xcassets */; };
 		C39EEDF81F34A53A00537227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39EEDF61F34A53A00537227 /* LaunchScreen.storyboard */; };
-		C39EEE031F34A53A00537227 /* Mars_ExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EEE021F34A53A00537227 /* Mars_ExplorerTests.swift */; };
 		C39EEE0E1F34A53A00537227 /* Mars_ExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EEE0D1F34A53A00537227 /* Mars_ExplorerUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,16 +53,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C31BDF811F35F8500011AD8D /* venus rising rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "venus rising rg.ttf"; sourceTree = "<group>"; };
+		C31BDF831F35F85F0011AD8D /* nasalization-rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nasalization-rg.ttf"; sourceTree = "<group>"; };
+		C31BDF861F376B990011AD8D /* sputnik-beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sputnik-beep.mp3"; sourceTree = "<group>"; };
+		C31BDF881F376BCC0011AD8D /* hawquindar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hawquindar.mp3; sourceTree = "<group>"; };
+		C31BDF891F376BCC0011AD8D /* hskquindar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hskquindar.mp3; sourceTree = "<group>"; };
+		C31BDF8C1F376C540011AD8D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controller/HomeViewController.swift; sourceTree = "<group>"; };
+		C31BDF8E1F3777610011AD8D /* SciFiActivitySpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SciFiActivitySpinner.swift; path = View/SciFiActivitySpinner.swift; sourceTree = "<group>"; };
+		C31BDF911F386E7B0011AD8D /* WebRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebRequest.swift; path = Utils/WebRequest.swift; sourceTree = "<group>"; };
+		C31BDF931F386EE80011AD8D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Utils/SwiftyJSON.swift; sourceTree = "<group>"; };
+		C31BDF951F3891020011AD8D /* WebRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebRequestTests.swift; sourceTree = "<group>"; };
+		C31BDF981F3898700011AD8D /* NASADataAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NASADataAPI.swift; path = API/NASADataAPI.swift; sourceTree = "<group>"; };
+		C31BDF9B1F38C36A0011AD8D /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Models.swift; path = Model/Models.swift; sourceTree = "<group>"; };
+		C31BDF9D1F38CD1F0011AD8D /* NASADataAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NASADataAPITests.swift; sourceTree = "<group>"; };
+		C31BDF9F1F38D2B20011AD8D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Utils/Extensions.swift; sourceTree = "<group>"; };
+		C31BDFA11F38D34F0011AD8D /* UIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIConstants.swift; path = View/UIConstants.swift; sourceTree = "<group>"; };
+		C31BDFA31F38D6A00011AD8D /* ui_select.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ui_select.mp3; sourceTree = "<group>"; };
+		C31BDFA51F38D8630011AD8D /* film_static.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = film_static.wav; sourceTree = "<group>"; };
+		C31BDFA71F38D9CC0011AD8D /* space_ambience.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = space_ambience.wav; sourceTree = "<group>"; };
+		C382EDAC1F3A137E00F7899C /* ViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewBuilder.swift; path = View/ViewBuilder.swift; sourceTree = "<group>"; };
+		C382EDAE1F3A226500F7899C /* ViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewAnimator.swift; path = View/ViewAnimator.swift; sourceTree = "<group>"; };
+		C382EDB21F3A3A0E00F7899C /* SoundEffectPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundEffectPlayer.swift; path = Utils/SoundEffectPlayer.swift; sourceTree = "<group>"; };
 		C39EEDE81F34A53A00537227 /* Mars Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mars Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39EEDEB1F34A53A00537227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C39EEDED1F34A53A00537227 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		C39EEDEF1F34A53A00537227 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C39EEDF21F34A53A00537227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C39EEDF41F34A53A00537227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C39EEDF71F34A53A00537227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C39EEDF91F34A53A00537227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C39EEDFE1F34A53A00537227 /* Mars ExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mars ExplorerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C39EEE021F34A53A00537227 /* Mars_ExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_ExplorerTests.swift; sourceTree = "<group>"; };
 		C39EEE041F34A53A00537227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C39EEE091F34A53A00537227 /* Mars ExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mars ExplorerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39EEE0D1F34A53A00537227 /* Mars_ExplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_ExplorerUITests.swift; sourceTree = "<group>"; };
@@ -76,6 +112,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C31BDF801F35F83D0011AD8D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C31BDF831F35F85F0011AD8D /* nasalization-rg.ttf */,
+				C31BDF811F35F8500011AD8D /* venus rising rg.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		C31BDF851F376B8A0011AD8D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C31BDFA71F38D9CC0011AD8D /* space_ambience.wav */,
+				C31BDFA51F38D8630011AD8D /* film_static.wav */,
+				C31BDFA31F38D6A00011AD8D /* ui_select.mp3 */,
+				C31BDF881F376BCC0011AD8D /* hawquindar.mp3 */,
+				C31BDF891F376BCC0011AD8D /* hskquindar.mp3 */,
+				C31BDF861F376B990011AD8D /* sputnik-beep.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		C31BDF901F386E550011AD8D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C31BDF911F386E7B0011AD8D /* WebRequest.swift */,
+				C31BDF931F386EE80011AD8D /* SwiftyJSON.swift */,
+				C31BDF9F1F38D2B20011AD8D /* Extensions.swift */,
+				C382EDB21F3A3A0E00F7899C /* SoundEffectPlayer.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		C31BDF971F3898470011AD8D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C31BDF981F3898700011AD8D /* NASADataAPI.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		C31BDF9A1F38C3580011AD8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C31BDF9B1F38C36A0011AD8D /* Models.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C39EEDDF1F34A53A00537227 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +184,9 @@
 		C39EEDEA1F34A53A00537227 /* Mars Explorer */ = {
 			isa = PBXGroup;
 			children = (
+				C31BDF9A1F38C3580011AD8D /* Model */,
+				C31BDF971F3898470011AD8D /* API */,
+				C31BDF901F386E550011AD8D /* Utils */,
 				C39EEE1C1F34A56A00537227 /* View */,
 				C39EEE1E1F34A58200537227 /* Controller */,
 				C39EEE1D1F34A57200537227 /* Assets */,
@@ -110,8 +198,9 @@
 		C39EEE011F34A53A00537227 /* Mars ExplorerTests */ = {
 			isa = PBXGroup;
 			children = (
-				C39EEE021F34A53A00537227 /* Mars_ExplorerTests.swift */,
 				C39EEE041F34A53A00537227 /* Info.plist */,
+				C31BDF951F3891020011AD8D /* WebRequestTests.swift */,
+				C31BDF9D1F38CD1F0011AD8D /* NASADataAPITests.swift */,
 			);
 			path = "Mars ExplorerTests";
 			sourceTree = "<group>";
@@ -137,6 +226,10 @@
 		C39EEE1C1F34A56A00537227 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C31BDF8E1F3777610011AD8D /* SciFiActivitySpinner.swift */,
+				C31BDFA11F38D34F0011AD8D /* UIConstants.swift */,
+				C382EDAC1F3A137E00F7899C /* ViewBuilder.swift */,
+				C382EDAE1F3A226500F7899C /* ViewAnimator.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -144,6 +237,8 @@
 		C39EEE1D1F34A57200537227 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				C31BDF851F376B8A0011AD8D /* Sounds */,
+				C31BDF801F35F83D0011AD8D /* Fonts */,
 				C39EEDF41F34A53A00537227 /* Assets.xcassets */,
 				C39EEDF61F34A53A00537227 /* LaunchScreen.storyboard */,
 				C39EEDF11F34A53A00537227 /* Main.storyboard */,
@@ -154,8 +249,7 @@
 		C39EEE1E1F34A58200537227 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C39EEDED1F34A53A00537227 /* MasterViewController.swift */,
-				C39EEDEF1F34A53A00537227 /* DetailViewController.swift */,
+				C31BDF8C1F376C540011AD8D /* HomeViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -271,7 +365,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C39EEDF81F34A53A00537227 /* LaunchScreen.storyboard in Resources */,
+				C31BDF821F35F8500011AD8D /* venus rising rg.ttf in Resources */,
 				C39EEDF51F34A53A00537227 /* Assets.xcassets in Resources */,
+				C31BDF8A1F376BCC0011AD8D /* hawquindar.mp3 in Resources */,
+				C31BDF871F376B990011AD8D /* sputnik-beep.mp3 in Resources */,
+				C31BDFA41F38D6A00011AD8D /* ui_select.mp3 in Resources */,
+				C31BDFA81F38D9CC0011AD8D /* space_ambience.wav in Resources */,
+				C31BDF841F35F85F0011AD8D /* nasalization-rg.ttf in Resources */,
+				C31BDF8B1F376BCC0011AD8D /* hskquindar.mp3 in Resources */,
+				C31BDFA61F38D8630011AD8D /* film_static.wav in Resources */,
 				C39EEDF31F34A53A00537227 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,9 +399,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C39EEDF01F34A53A00537227 /* DetailViewController.swift in Sources */,
-				C39EEDEE1F34A53A00537227 /* MasterViewController.swift in Sources */,
+				C31BDF8F1F3777610011AD8D /* SciFiActivitySpinner.swift in Sources */,
 				C39EEDEC1F34A53A00537227 /* AppDelegate.swift in Sources */,
+				C31BDFA21F38D34F0011AD8D /* UIConstants.swift in Sources */,
+				C31BDF921F386E7B0011AD8D /* WebRequest.swift in Sources */,
+				C31BDFA01F38D2B20011AD8D /* Extensions.swift in Sources */,
+				C382EDB31F3A3A0E00F7899C /* SoundEffectPlayer.swift in Sources */,
+				C31BDF941F386EE80011AD8D /* SwiftyJSON.swift in Sources */,
+				C31BDF8D1F376C540011AD8D /* HomeViewController.swift in Sources */,
+				C382EDAF1F3A226500F7899C /* ViewAnimator.swift in Sources */,
+				C31BDF991F3898700011AD8D /* NASADataAPI.swift in Sources */,
+				C382EDAD1F3A137E00F7899C /* ViewBuilder.swift in Sources */,
+				C31BDF9C1F38C36A0011AD8D /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +418,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C39EEE031F34A53A00537227 /* Mars_ExplorerTests.swift in Sources */,
+				C31BDF961F3891020011AD8D /* WebRequestTests.swift in Sources */,
+				C31BDF9E1F38CD1F0011AD8D /* NASADataAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +567,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KZN79N89H3;
 				INFOPLIST_FILE = "Mars Explorer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.aahmedae.Mars-Explorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -468,6 +581,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KZN79N89H3;
 				INFOPLIST_FILE = "Mars Explorer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.aahmedae.Mars-Explorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -552,6 +666,7 @@
 				C39EEE141F34A53A00537227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C39EEE151F34A53A00537227 /* Build configuration list for PBXNativeTarget "Mars ExplorerTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +675,7 @@
 				C39EEE171F34A53A00537227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C39EEE181F34A53A00537227 /* Build configuration list for PBXNativeTarget "Mars ExplorerUITests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +684,7 @@
 				C39EEE1A1F34A53A00537227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,142 +1,316 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JIk-9B-Nkc">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="nasalization-rg.ttf">
+            <string>NasalizationRg-Regular</string>
+        </array>
+        <array key="venus rising rg.ttf">
+            <string>VenusRising-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Master-->
-        <scene sceneID="pY4-Hu-kfo">
+        <!--Home View Controller-->
+        <scene sceneID="SOv-ES-YoC">
             <objects>
-                <navigationController title="Master" id="RMx-3f-FxP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Pmd-2v-anx">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8fS-aE-onr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-38" y="-630"/>
-        </scene>
-        <!--Detail-->
-        <scene sceneID="yUG-lL-AsK">
-            <objects>
-                <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="Mars_Explorer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JIk-9B-Nkc" customClass="HomeViewController" customModule="Mars_Explorer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
-                        <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
+                        <viewControllerLayoutGuide type="top" id="7Me-ph-Is3"/>
+                        <viewControllerLayoutGuide type="bottom" id="fgj-tE-o0A"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
-                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                    <view key="view" contentMode="scaleToFill" id="pok-A6-rD8">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="20" y="375.5" width="663" height="17"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lwb-jH-oHz">
+                                <rect key="frame" x="20" y="512" width="208" height="236"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecm-75-JOc">
+                                        <rect key="frame" x="0.0" y="0.0" width="208" height="112"/>
+                                        <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="24"/>
+                                        <state key="normal" title="ROVER" backgroundImage="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" title="ROVER" backgroundImage="Button Highlighted">
+                                            <color key="titleColor" red="0.22352941176470587" green="0.79607843137254897" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="JIk-9B-Nkc" eventType="touchUpInside" id="flm-Ee-v3b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXx-7l-UJh">
+                                        <rect key="frame" x="0.0" y="124" width="208" height="112"/>
+                                        <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="24"/>
+                                        <state key="normal" title="SOL" backgroundImage="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="Button Highlighted">
+                                            <color key="titleColor" red="0.22352941179999999" green="0.79607843140000001" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="JIk-9B-Nkc" eventType="touchUpInside" id="BeW-ef-qhK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcZ-ZI-XsG" customClass="SciFiActivitySpinner" customModule="Mars_Explorer" customModuleProvider="target">
+                                <rect key="frame" x="256" y="128" width="512" height="512"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dcZ-ZI-XsG" secondAttribute="height" multiplier="1:1" id="iaI-Mb-a3r"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5y-aF-OgI">
+                                <rect key="frame" x="256" y="307" width="512" height="154"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Ge-W6-bxA">
+                                        <rect key="frame" x="20" y="20" width="472" height="114"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oP5-xs-KLR">
+                                                <rect key="frame" x="0.0" y="3" width="152" height="108.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1k-Kh-73R">
+                                                        <rect key="frame" x="24" y="0.0" width="104.5" height="86"/>
+                                                        <state key="normal" image="Rover Icon A "/>
+                                                        <state key="selected" image="Rover Icon Selected"/>
+                                                        <state key="highlighted" image="Rover Icon Selected"/>
+                                                        <connections>
+                                                            <action selector="roverButtonTapped:" destination="JIk-9B-Nkc" eventType="touchUpInside" id="2Hq-Je-ivM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curiousity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMv-2P-PEG">
+                                                        <rect key="frame" x="24" y="94" width="104.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="zMv-2P-PEG" firstAttribute="width" secondItem="v1k-Kh-73R" secondAttribute="width" id="joP-jP-SVe"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n96-Jp-XFZ">
+                                                <rect key="frame" x="160" y="3" width="152" height="108.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnH-g8-tVh">
+                                                        <rect key="frame" x="14" y="0.0" width="124.5" height="86"/>
+                                                        <state key="normal" image="Rover Icon B"/>
+                                                        <state key="selected" image="Rover Icon Selected"/>
+                                                        <state key="highlighted" image="Rover Icon Selected"/>
+                                                        <connections>
+                                                            <action selector="roverButtonTapped:" destination="JIk-9B-Nkc" eventType="touchUpInside" id="Vlg-H3-XhU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opportunity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2X-cE-qD5">
+                                                        <rect key="frame" x="14" y="94" width="124.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="F2X-cE-qD5" firstAttribute="width" secondItem="vnH-g8-tVh" secondAttribute="width" id="7uq-Vn-hxx"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bca-W3-R4z">
+                                                <rect key="frame" x="320" y="3" width="152" height="108.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stn-S7-rxV">
+                                                        <rect key="frame" x="24.5" y="0.0" width="103" height="86"/>
+                                                        <state key="normal" image="Rover Icon C"/>
+                                                        <state key="selected" image="Rover Icon Selected"/>
+                                                        <state key="highlighted" image="Rover Icon Selected"/>
+                                                        <connections>
+                                                            <action selector="roverButtonTapped:" destination="JIk-9B-Nkc" eventType="touchUpInside" id="0d7-Qd-Z4K"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spirit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-NX-0Il">
+                                                        <rect key="frame" x="24.5" y="94" width="103" height="14.5"/>
+                                                        <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="12"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="hs2-NX-0Il" firstAttribute="width" secondItem="stn-S7-rxV" secondAttribute="width" id="RcB-oy-rG3"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.062745098040000002" green="0.058823529409999999" blue="0.058823529409999999" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6Ge-W6-bxA" secondAttribute="bottom" constant="20" symbolic="YES" id="Rw3-MP-D2D"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Ge-W6-bxA" secondAttribute="trailing" constant="20" symbolic="YES" id="cO6-TP-KG0"/>
+                                    <constraint firstItem="6Ge-W6-bxA" firstAttribute="top" secondItem="y5y-aF-OgI" secondAttribute="top" constant="20" symbolic="YES" id="qE3-3e-oIj"/>
+                                    <constraint firstItem="6Ge-W6-bxA" firstAttribute="leading" secondItem="y5y-aF-OgI" secondAttribute="leading" constant="20" symbolic="YES" id="sz6-4b-dGr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geu-PO-C88">
+                                <rect key="frame" x="345" y="333" width="333" height="102"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJp-Bc-MLv">
+                                        <rect key="frame" x="20.5" y="20" width="292.5" height="62"/>
+                                        <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CJp-Bc-MLv" secondAttribute="trailing" constant="20" symbolic="YES" id="cq8-Wq-MiV"/>
+                                    <constraint firstItem="CJp-Bc-MLv" firstAttribute="leading" secondItem="geu-PO-C88" secondAttribute="leading" constant="20" symbolic="YES" id="e8a-yC-kN3"/>
+                                    <constraint firstItem="CJp-Bc-MLv" firstAttribute="top" secondItem="geu-PO-C88" secondAttribute="top" constant="20" symbolic="YES" id="gdS-1F-AFo"/>
+                                    <constraint firstAttribute="bottom" secondItem="CJp-Bc-MLv" secondAttribute="bottom" constant="20" symbolic="YES" id="wwd-zz-o1s"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbG-JS-0ga">
+                                <rect key="frame" x="256" y="253.5" width="512" height="307"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cQl-wO-Eh3">
+                                        <rect key="frame" x="8" y="23" width="205" height="261"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curiousity" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFm-sd-V3t">
+                                        <rect key="frame" x="221" y="23" width="271" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="F4V-Lm-zOM">
+                                        <rect key="frame" x="221" y="76" width="271" height="155.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yey-tm-1yw">
+                                                <rect key="frame" x="0.0" y="0.0" width="271" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Te-TD-ywD">
+                                                <rect key="frame" x="0.0" y="33.5" width="271" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocH-WI-nha">
+                                                <rect key="frame" x="0.0" y="67" width="271" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5A-Tw-1w4">
+                                                <rect key="frame" x="0.0" y="100.5" width="271" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTY-cE-BEo">
+                                                <rect key="frame" x="0.0" y="134" width="271" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GFm-sd-V3t" secondAttribute="trailing" constant="20" symbolic="YES" id="6AB-OO-4VB"/>
+                                    <constraint firstItem="cQl-wO-Eh3" firstAttribute="centerY" secondItem="nbG-JS-0ga" secondAttribute="centerY" id="BKD-zb-V08"/>
+                                    <constraint firstItem="F4V-Lm-zOM" firstAttribute="leading" secondItem="cQl-wO-Eh3" secondAttribute="trailing" constant="8" symbolic="YES" id="E1m-Lk-6XK"/>
+                                    <constraint firstItem="cQl-wO-Eh3" firstAttribute="height" secondItem="nbG-JS-0ga" secondAttribute="height" multiplier="0.85" id="KMc-6A-hOa"/>
+                                    <constraint firstItem="GFm-sd-V3t" firstAttribute="leading" secondItem="cQl-wO-Eh3" secondAttribute="trailing" constant="8" symbolic="YES" id="Udm-gN-6c9"/>
+                                    <constraint firstItem="cQl-wO-Eh3" firstAttribute="width" secondItem="nbG-JS-0ga" secondAttribute="width" multiplier="0.4" id="WCd-Su-WzQ"/>
+                                    <constraint firstItem="F4V-Lm-zOM" firstAttribute="centerY" secondItem="nbG-JS-0ga" secondAttribute="centerY" id="vpc-VX-JeS"/>
+                                    <constraint firstItem="GFm-sd-V3t" firstAttribute="top" secondItem="cQl-wO-Eh3" secondAttribute="top" id="vtT-dm-j6o"/>
+                                    <constraint firstItem="cQl-wO-Eh3" firstAttribute="leading" secondItem="nbG-JS-0ga" secondAttribute="leading" constant="8" id="wfx-sM-8Rl"/>
+                                    <constraint firstAttribute="trailing" secondItem="F4V-Lm-zOM" secondAttribute="trailing" constant="20" symbolic="YES" id="zfF-Hx-eVS"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOn-Lq-G24">
+                                <rect key="frame" x="408" y="636" width="208" height="112"/>
+                                <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="24"/>
+                                <state key="normal" title="Explore" backgroundImage="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="Explore" backgroundImage="Button Highlighted">
+                                    <color key="titleColor" red="0.22352941179999999" green="0.79607843140000001" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" title="Explore" backgroundImage="Button Highlighted">
+                                    <color key="titleColor" red="0.22352941179999999" green="0.79607843140000001" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="exploreButtonTapped:" destination="JIk-9B-Nkc" eventType="touchUpInside" id="xte-I7-K4p"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MARS EXPLORER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diU-F1-3WS">
+                                <rect key="frame" x="20" y="28" width="984" height="64.5"/>
+                                <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="54"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="20" symbolic="YES" id="Tsc-yG-G1q"/>
-                            <constraint firstItem="0XM-y9-sOw" firstAttribute="centerY" secondItem="svH-Pt-448" secondAttribute="centerY" id="jWN-iV-94e"/>
-                            <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="20" symbolic="YES" id="tHV-ZD-HQj"/>
+                            <constraint firstItem="vOn-Lq-G24" firstAttribute="centerY" secondItem="zXx-7l-UJh" secondAttribute="centerY" id="03A-dW-FhJ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="lwb-jH-oHz" secondAttribute="leading" id="5fB-aN-3y1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="diU-F1-3WS" secondAttribute="trailing" id="Cka-8h-emV"/>
+                            <constraint firstItem="geu-PO-C88" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" id="DsZ-Ng-MD7"/>
+                            <constraint firstItem="dcZ-ZI-XsG" firstAttribute="width" secondItem="pok-A6-rD8" secondAttribute="width" multiplier="0.5" id="EZI-ZT-Kg3"/>
+                            <constraint firstItem="nbG-JS-0ga" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" multiplier="1.06" id="Ik2-95-5Gs"/>
+                            <constraint firstItem="geu-PO-C88" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="No6-aR-ugV"/>
+                            <constraint firstItem="diU-F1-3WS" firstAttribute="leading" secondItem="pok-A6-rD8" secondAttribute="leadingMargin" id="RsJ-Ci-QfY"/>
+                            <constraint firstItem="y5y-aF-OgI" firstAttribute="height" secondItem="pok-A6-rD8" secondAttribute="height" multiplier="0.2" id="S99-b3-OPQ"/>
+                            <constraint firstItem="vOn-Lq-G24" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="VyR-Zh-JkB"/>
+                            <constraint firstItem="dcZ-ZI-XsG" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" id="WYA-dl-Puj"/>
+                            <constraint firstItem="y5y-aF-OgI" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="XAx-NU-DvC"/>
+                            <constraint firstItem="nbG-JS-0ga" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="daG-k9-Q8c"/>
+                            <constraint firstItem="dcZ-ZI-XsG" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="ejT-f4-Jtl"/>
+                            <constraint firstItem="geu-PO-C88" firstAttribute="width" secondItem="dcZ-ZI-XsG" secondAttribute="width" multiplier="0.65" id="jwZ-4x-cPT"/>
+                            <constraint firstItem="nbG-JS-0ga" firstAttribute="height" secondItem="pok-A6-rD8" secondAttribute="height" multiplier="0.4" id="lSC-zJ-tFn"/>
+                            <constraint firstItem="nbG-JS-0ga" firstAttribute="width" secondItem="y5y-aF-OgI" secondAttribute="width" id="lnK-f6-iLl"/>
+                            <constraint firstItem="y5y-aF-OgI" firstAttribute="width" secondItem="dcZ-ZI-XsG" secondAttribute="width" id="olh-26-VBD"/>
+                            <constraint firstItem="y5y-aF-OgI" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" id="pl3-vI-abE"/>
+                            <constraint firstItem="fgj-tE-o0A" firstAttribute="top" secondItem="lwb-jH-oHz" secondAttribute="bottom" constant="20" id="t5J-wv-Moz"/>
+                            <constraint firstItem="diU-F1-3WS" firstAttribute="top" secondItem="7Me-ph-Is3" secondAttribute="bottom" constant="8" symbolic="YES" id="vNe-IG-egB"/>
+                            <constraint firstItem="geu-PO-C88" firstAttribute="height" secondItem="dcZ-ZI-XsG" secondAttribute="height" multiplier="0.2" id="yuM-qa-7HO"/>
                         </constraints>
                     </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
+                        <outlet property="exploreButton" destination="vOn-Lq-G24" id="EOk-ax-PSo"/>
+                        <outlet property="loadingMessageLabel" destination="CJp-Bc-MLv" id="JGz-QY-7Hb"/>
+                        <outlet property="messageView" destination="geu-PO-C88" id="0zQ-m1-CzC"/>
+                        <outlet property="roverButton" destination="ecm-75-JOc" id="hbR-AB-dF7"/>
+                        <outlet property="roverManifestPanel" destination="nbG-JS-0ga" id="G5z-MC-nPw"/>
+                        <outlet property="roverSelectionPanel" destination="y5y-aF-OgI" id="aCP-z0-rRy"/>
+                        <outlet property="roverSelectionPanelCenterYConstraint" destination="pl3-vI-abE" id="mnW-GB-vAC"/>
+                        <outlet property="scifiSpinner" destination="dcZ-ZI-XsG" id="ONH-h5-hg7"/>
+                        <outlet property="solButton" destination="zXx-7l-UJh" id="Ssw-Pf-HE5"/>
+                        <outletCollection property="roverButtons" destination="v1k-Kh-73R" collectionClass="NSMutableArray" id="gdl-Kx-WHm"/>
+                        <outletCollection property="roverButtons" destination="vnH-g8-tVh" collectionClass="NSMutableArray" id="Se7-zD-eaM"/>
+                        <outletCollection property="roverButtons" destination="stn-S7-rxV" collectionClass="NSMutableArray" id="8Wm-oA-OEn"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIC-UT-SeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="129"/>
-        </scene>
-        <!--Split View Controller-->
-        <scene sceneID="Nki-YV-4Qg">
-            <objects>
-                <splitViewController id="H1p-Uh-vWS" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <connections>
-                        <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
-                        <segue destination="vC3-pB-5Vb" kind="relationship" relationship="detailViewController" id="Tll-UG-LXB"/>
-                    </connections>
-                </splitViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cZU-Oi-B1e" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-856" y="-330"/>
-        </scene>
-        <!--Master-->
-        <scene sceneID="smW-Zh-WAh">
-            <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Mars_Explorer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="7bK-jq-Zjz" id="Gho-Na-rnu"/>
-                            <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="709" y="-630"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="r7l-gg-dq7">
-            <objects>
-                <navigationController id="vC3-pB-5Vb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DjV-YW-jjY">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="JEX-9P-axG" kind="relationship" relationship="rootViewController" id="GKi-kA-LjT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-45" y="129"/>
+            <point key="canvasLocation" x="-798.046875" y="-320.3125"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Button" width="208" height="112"/>
+        <image name="Button Highlighted" width="208" height="112"/>
+        <image name="Rover Icon A " width="103" height="86"/>
+        <image name="Rover Icon B" width="103" height="86"/>
+        <image name="Rover Icon C" width="103" height="86"/>
+        <image name="Rover Icon Selected" width="103" height="86"/>
+    </resources>
 </document>
