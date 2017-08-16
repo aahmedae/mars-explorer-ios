@@ -9,16 +9,20 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewBuilder
 {
     // MARK:- Constants
+    
     fileprivate static let ROVER_MANIFEST_PANEL_ROVER_NAME_TAG = 0
     fileprivate static let ROVER_MANIFEST_PANEL_LAND_DATE_TAG = 1
     fileprivate static let ROVER_MANIFEST_PANEL_LAUNCH_DATE_TAG = 2
     fileprivate static let ROVER_MANIFEST_PANEL_STATUS_TAG = 3
     fileprivate static let ROVER_MANIFEST_PANEL_SOL_TAG = 4
     fileprivate static let ROVER_MANIFEST_PANEL_PHOTOS_TAG = 5
+    
+    fileprivate static let TV_STATIC_VIDEO_NAME = "TV static effect"
     
     // MARK:- Public API
     
@@ -58,6 +62,38 @@ class ViewBuilder
         messageView.backgroundColor = UIColor.clear
         messageView.layer.contents = #imageLiteral(resourceName: "Loading Message Panel").cgImage
         messageView.layer.contentsGravity = kCAGravityResizeAspect
+    }
+    
+    // Sets up the given view to show a TV static video
+    static func setupTVStaticVideoView(view: UIView)
+    {
+        let path = Bundle.main.path(forResource: TV_STATIC_VIDEO_NAME, ofType: "mp4")!
+        let asset = AVAsset(url: URL(fileURLWithPath: path))
+        
+        let player = AVPlayer(playerItem: AVPlayerItem(asset: asset))
+        player.actionAtItemEnd = .none
+        player.volume = 0.6
+        player.pause()
+        
+        let layer = AVPlayerLayer(player: player)
+        layer.frame = CGRect(origin: CGPoint.zero, size: view.frame.size)
+        layer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        
+        view.layer.addSublayer(layer)
+    }
+    
+    // Play or pause the video for the static view using the AVLayer
+    static func setTVStaticVideoStatus(shouldPause: Bool, view: UIView)
+    {
+        if let layer = view.layer.sublayers?.first as? AVPlayerLayer
+        {
+            if shouldPause {
+                layer.player?.pause()
+            }
+            else {
+                layer.player?.play()
+            }
+        }
     }
     
     // Fills the rover manifest panel with info based on the rover manifest data

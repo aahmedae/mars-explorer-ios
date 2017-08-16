@@ -26,6 +26,10 @@ class NASADataAPI
     fileprivate let ENDPOINT_ROVER_MANIFEST_OPPORTUNITY = "https://api.nasa.gov/mars-photos/api/v1/manifests/opportunity"
     fileprivate let ENDPOINT_ROVER_MANIFEST_SPIRIT = "https://api.nasa.gov/mars-photos/api/v1/manifests/spirit"
     
+    fileprivate let ENDPOINT_ROVER_PHOTOS_CURIOUSITY = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos"
+    fileprivate let ENDPOINT_ROVER_PHOTOS_OPPORTUNITY = "https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos"
+    fileprivate let ENDPOINT_ROVER_PHOTOS_SPIRIT = "https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos"
+    
     // MARK:- Public API
     
     // Download manifests for all 3 rovers
@@ -65,6 +69,47 @@ class NASADataAPI
                         print("Error in fetching json for curiousity")
                         callback(nil, .serverError)
                     }
+                }
+            }
+        }
+    }
+    
+    // Download photo data for the given rover on the given sol
+    func downloadRoverPhotos(rover: Rover, sol: Int, callback: @escaping ([RoverCamera: [String]]?, WebRequest.WebRequestError?) -> Void)
+    {
+        let endpoints: [Rover: String] = [.curiousity: ENDPOINT_ROVER_PHOTOS_CURIOUSITY, .opportunity: ENDPOINT_ROVER_PHOTOS_OPPORTUNITY, .spirit: ENDPOINT_ROVER_PHOTOS_SPIRIT]
+        let parameters: [String: Any] = ["api_key": API_KEY, "sol": sol]
+        var photos = [RoverCamera: [String]]()
+        
+        WebRequest.shared.request(urlString: endpoints[rover]!, method: .GET, parameters: parameters) { (json, error) in
+            if error != nil
+            {
+                print("Error in NASADataAPI: \(error!)")
+                callback(nil, .serverError)
+            }
+            else
+            {
+                // parse into structured model, where photos are organized by camera
+                if let json = json
+                {
+                    let photosJsonArray = json["photos"].arrayValue
+                    for photoJson in photosJsonArray
+                    {
+                        let camera = RoverCamera(rawValue: photoJson["camera"]["name"].stringValue)!
+                        let photoUrl = photoJson["img_src"].stringValue
+                        
+                        if photos[camera] == nil {
+                            photos[camera] = [String]()
+                        }
+                        
+                        photos[camera]!.append(photoUrl)
+                    }
+                    
+                    callback(photos, nil)
+                }
+                else
+                {
+                    callback(nil, .serverError)
                 }
             }
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JIk-9B-Nkc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dmH-9l-QK4">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -187,34 +187,34 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="F4V-Lm-zOM">
-                                        <rect key="frame" x="221" y="76" width="271" height="155.5"/>
+                                        <rect key="frame" x="221" y="76.5" width="271" height="155.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yey-tm-1yw">
-                                                <rect key="frame" x="0.0" y="0.0" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="0.5" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Te-TD-ywD">
-                                                <rect key="frame" x="0.0" y="33.5" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="34" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocH-WI-nha">
-                                                <rect key="frame" x="0.0" y="67" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="67.5" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5A-Tw-1w4">
-                                                <rect key="frame" x="0.0" y="100.5" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="101" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTY-cE-BEo">
-                                                <rect key="frame" x="0.0" y="134" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="134.5" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -304,10 +304,215 @@
             </objects>
             <point key="canvasLocation" x="-798.046875" y="-320.3125"/>
         </scene>
+        <!--Exploration View Controller-->
+        <scene sceneID="blC-95-zWY">
+            <objects>
+                <viewController id="dmH-9l-QK4" customClass="ExplorationViewController" customModule="Mars_Explorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qc1-bO-6ua"/>
+                        <viewControllerLayoutGuide type="bottom" id="TsC-na-Tbt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oIl-dr-A6W">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4AH-TN-NA3">
+                                <rect key="frame" x="20" y="568" width="984" height="192"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="57U-1r-AKs">
+                                        <rect key="frame" x="20" y="20" width="208" height="152"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weZ-Nj-2Pg">
+                                                <rect key="frame" x="48" y="0.0" width="112" height="56"/>
+                                                <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Co-oi-kyc">
+                                                <rect key="frame" x="0.0" y="56" width="208" height="96"/>
+                                                <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="18"/>
+                                                <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                                <state key="normal" title="Curiosity" backgroundImage="Button"/>
+                                                <state key="selected" backgroundImage="Button Highlighted"/>
+                                                <state key="highlighted" backgroundImage="Button Highlighted"/>
+                                                <connections>
+                                                    <action selector="controlButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="x4J-XE-TCm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IuX-fB-MlG">
+                                        <rect key="frame" x="756" y="20" width="208" height="152"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsE-Za-S8b">
+                                                <rect key="frame" x="32" y="0.0" width="144" height="56"/>
+                                                <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xo0-Xc-1FP">
+                                                <rect key="frame" x="0.0" y="56" width="208" height="96"/>
+                                                <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="18"/>
+                                                <state key="normal" title="FHAZ" backgroundImage="Button"/>
+                                                <state key="selected" backgroundImage="Button Highlighted"/>
+                                                <state key="highlighted" backgroundImage="Button Highlighted"/>
+                                                <connections>
+                                                    <action selector="controlButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="2bD-JV-3PJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utb-xe-DBC">
+                                        <rect key="frame" x="462" y="35" width="61.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3U0-f5-9Sb" customClass="SOLDialView" customModule="Mars_Explorer" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="76" width="512" height="96"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ghb-dX-HAe">
+                                        <rect key="frame" x="300" y="76" width="384" height="96"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoM-xQ-jO8">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="96"/>
+                                                <state key="normal" image="Decrement Sol Button"/>
+                                                <state key="selected" image="Decrement Sol Button Highlighted"/>
+                                                <state key="highlighted" image="Decrement Sol Button Highlighted"/>
+                                                <connections>
+                                                    <action selector="controlButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="fl8-Og-hzM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsp-L0-MWO">
+                                                <rect key="frame" x="88" y="0.0" width="208" height="96"/>
+                                                <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="18"/>
+                                                <state key="normal" title="1000" backgroundImage="Button"/>
+                                                <state key="selected" backgroundImage="Button Highlighted"/>
+                                                <state key="highlighted" backgroundImage="Button Highlighted"/>
+                                                <connections>
+                                                    <action selector="controlButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="tId-0G-uhA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnT-6T-cVx">
+                                                <rect key="frame" x="308" y="0.0" width="76" height="96"/>
+                                                <state key="normal" image="Increment Sol Button"/>
+                                                <state key="selected" image="Increment Sol Button Highlighted"/>
+                                                <state key="highlighted" image="Increment Sol Button Highlighted"/>
+                                                <connections>
+                                                    <action selector="controlButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="NP7-su-6O9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="IuX-fB-MlG" firstAttribute="top" secondItem="4AH-TN-NA3" secondAttribute="top" constant="20" symbolic="YES" id="1um-Xm-gVg"/>
+                                    <constraint firstItem="3U0-f5-9Sb" firstAttribute="top" secondItem="1Co-oi-kyc" secondAttribute="top" id="91w-Ym-5o1"/>
+                                    <constraint firstItem="xo0-Xc-1FP" firstAttribute="height" secondItem="4AH-TN-NA3" secondAttribute="height" multiplier="0.5" id="AUb-Oh-R61"/>
+                                    <constraint firstAttribute="trailing" secondItem="IuX-fB-MlG" secondAttribute="trailing" constant="20" symbolic="YES" id="G46-30-QsO"/>
+                                    <constraint firstItem="ghb-dX-HAe" firstAttribute="centerX" secondItem="4AH-TN-NA3" secondAttribute="centerX" id="GMx-hS-kUE"/>
+                                    <constraint firstItem="Utb-xe-DBC" firstAttribute="centerX" secondItem="4AH-TN-NA3" secondAttribute="centerX" id="JcE-LK-MRr"/>
+                                    <constraint firstItem="1Co-oi-kyc" firstAttribute="height" secondItem="4AH-TN-NA3" secondAttribute="height" multiplier="0.5" id="JeV-aP-S4M"/>
+                                    <constraint firstItem="57U-1r-AKs" firstAttribute="leading" secondItem="4AH-TN-NA3" secondAttribute="leading" constant="20" symbolic="YES" id="KYI-Tv-EZD"/>
+                                    <constraint firstItem="57U-1r-AKs" firstAttribute="top" secondItem="4AH-TN-NA3" secondAttribute="top" constant="20" symbolic="YES" id="Scj-Bo-n8o"/>
+                                    <constraint firstItem="IuX-fB-MlG" firstAttribute="leading" secondItem="3U0-f5-9Sb" secondAttribute="trailing" constant="8" symbolic="YES" id="UL2-mh-NNt"/>
+                                    <constraint firstItem="3U0-f5-9Sb" firstAttribute="leading" secondItem="57U-1r-AKs" secondAttribute="trailing" constant="8" symbolic="YES" id="ddU-e6-E7d"/>
+                                    <constraint firstItem="Zsp-L0-MWO" firstAttribute="width" secondItem="1Co-oi-kyc" secondAttribute="width" id="n8f-uh-DqL"/>
+                                    <constraint firstItem="Utb-xe-DBC" firstAttribute="centerY" secondItem="weZ-Nj-2Pg" secondAttribute="centerY" id="pD4-Gt-L9J"/>
+                                    <constraint firstItem="3U0-f5-9Sb" firstAttribute="bottom" secondItem="1Co-oi-kyc" secondAttribute="bottom" id="phq-lO-fbK"/>
+                                    <constraint firstAttribute="bottom" secondItem="IuX-fB-MlG" secondAttribute="bottom" constant="20" symbolic="YES" id="pp9-kZ-Ufm"/>
+                                    <constraint firstAttribute="bottom" secondItem="57U-1r-AKs" secondAttribute="bottom" constant="20" symbolic="YES" id="qIv-zp-rnj"/>
+                                    <constraint firstItem="Zsp-L0-MWO" firstAttribute="height" secondItem="1Co-oi-kyc" secondAttribute="height" id="rcq-87-c6R"/>
+                                    <constraint firstItem="ghb-dX-HAe" firstAttribute="centerY" secondItem="1Co-oi-kyc" secondAttribute="centerY" id="se5-An-L2X"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1as-dx-Pb0">
+                                <rect key="frame" x="928" y="327" width="76" height="114"/>
+                                <state key="normal" image="Increment Sol Button"/>
+                                <connections>
+                                    <action selector="imageNavigationButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="jQt-7D-RGR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJU-aZ-Xxa">
+                                <rect key="frame" x="20" y="327" width="76" height="114"/>
+                                <state key="normal" image="Decrement Sol Button"/>
+                                <connections>
+                                    <action selector="imageNavigationButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="KmO-bX-hBX"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnm-rb-ZyI" customClass="SciFiActivitySpinner" customModule="Mars_Explorer" customModuleProvider="target">
+                                <rect key="frame" x="307" y="179" width="410" height="410"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pnm-rb-ZyI" secondAttribute="height" multiplier="1:1" id="4o9-75-Rmu"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52X-tw-Hrl">
+                                <rect key="frame" x="368.5" y="322.5" width="287" height="123"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk3-n1-Bvn">
+                                        <rect key="frame" x="20" y="20" width="247" height="83"/>
+                                        <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hk3-n1-Bvn" secondAttribute="trailing" constant="20" symbolic="YES" id="Y8E-hM-YLh"/>
+                                    <constraint firstItem="hk3-n1-Bvn" firstAttribute="top" secondItem="52X-tw-Hrl" secondAttribute="top" constant="20" symbolic="YES" id="fgl-Oe-Lzx"/>
+                                    <constraint firstAttribute="bottom" secondItem="hk3-n1-Bvn" secondAttribute="bottom" constant="20" symbolic="YES" id="kcV-it-2Rk"/>
+                                    <constraint firstItem="hk3-n1-Bvn" firstAttribute="leading" secondItem="52X-tw-Hrl" secondAttribute="leading" constant="20" symbolic="YES" id="zHK-Hp-vfN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1as-dx-Pb0" firstAttribute="centerY" secondItem="oIl-dr-A6W" secondAttribute="centerY" id="0Ro-ae-Nhb"/>
+                            <constraint firstItem="Pnm-rb-ZyI" firstAttribute="centerY" secondItem="oIl-dr-A6W" secondAttribute="centerY" id="38s-iU-VsA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1as-dx-Pb0" secondAttribute="trailing" id="AZM-wY-jFh"/>
+                            <constraint firstItem="Pnm-rb-ZyI" firstAttribute="centerX" secondItem="oIl-dr-A6W" secondAttribute="centerX" id="CGK-gq-Xf3"/>
+                            <constraint firstItem="52X-tw-Hrl" firstAttribute="height" secondItem="Pnm-rb-ZyI" secondAttribute="height" multiplier="0.3" id="RZv-bQ-HHy"/>
+                            <constraint firstItem="52X-tw-Hrl" firstAttribute="width" secondItem="Pnm-rb-ZyI" secondAttribute="width" multiplier="0.7" id="d1B-W7-jfh"/>
+                            <constraint firstItem="52X-tw-Hrl" firstAttribute="centerY" secondItem="Pnm-rb-ZyI" secondAttribute="centerY" id="hok-yK-T9G"/>
+                            <constraint firstItem="4AH-TN-NA3" firstAttribute="height" secondItem="oIl-dr-A6W" secondAttribute="height" multiplier="0.25" id="jaV-Gy-cMa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4AH-TN-NA3" secondAttribute="trailing" id="kxU-RS-W8a"/>
+                            <constraint firstItem="TsC-na-Tbt" firstAttribute="top" secondItem="4AH-TN-NA3" secondAttribute="bottom" constant="8" symbolic="YES" id="oEV-h3-IFM"/>
+                            <constraint firstItem="52X-tw-Hrl" firstAttribute="centerX" secondItem="Pnm-rb-ZyI" secondAttribute="centerX" id="q3c-p7-r4G"/>
+                            <constraint firstItem="IJU-aZ-Xxa" firstAttribute="centerY" secondItem="oIl-dr-A6W" secondAttribute="centerY" id="qsI-hs-mUt"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="IJU-aZ-Xxa" secondAttribute="leading" id="r5Y-wO-l2l"/>
+                            <constraint firstItem="4AH-TN-NA3" firstAttribute="leading" secondItem="oIl-dr-A6W" secondAttribute="leadingMargin" id="tNd-MA-wJc"/>
+                            <constraint firstItem="Pnm-rb-ZyI" firstAttribute="width" secondItem="oIl-dr-A6W" secondAttribute="width" multiplier="0.4" id="tr4-BW-RsH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="xo0-Xc-1FP" id="12j-BE-ZKa"/>
+                        <outlet property="controlPanel" destination="4AH-TN-NA3" id="wpV-6S-wL8"/>
+                        <outlet property="messageLabel" destination="hk3-n1-Bvn" id="nJ5-q2-vl4"/>
+                        <outlet property="messageView" destination="52X-tw-Hrl" id="Bon-cG-Ijr"/>
+                        <outlet property="nextImageButton" destination="1as-dx-Pb0" id="TYx-Gq-H50"/>
+                        <outlet property="previousImageButton" destination="IJU-aZ-Xxa" id="DKO-U4-hbe"/>
+                        <outlet property="roverButton" destination="1Co-oi-kyc" id="JOQ-Jz-Qoq"/>
+                        <outlet property="scifiSpinner" destination="Pnm-rb-ZyI" id="759-SL-GMD"/>
+                        <outlet property="solButton" destination="Zsp-L0-MWO" id="SY9-rG-wtu"/>
+                        <outlet property="solDecrementButton" destination="PoM-xQ-jO8" id="gZw-zK-B0Y"/>
+                        <outlet property="solIncrementButton" destination="nnT-6T-cVx" id="wdp-Cq-vvI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPj-it-dMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-128.3203125" y="-320.3125"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Button" width="208" height="112"/>
         <image name="Button Highlighted" width="208" height="112"/>
+        <image name="Decrement Sol Button" width="76" height="114"/>
+        <image name="Decrement Sol Button Highlighted" width="74" height="112"/>
+        <image name="Increment Sol Button" width="76" height="114"/>
+        <image name="Increment Sol Button Highlighted" width="74" height="112"/>
         <image name="Rover Icon A " width="103" height="86"/>
         <image name="Rover Icon B" width="103" height="86"/>
         <image name="Rover Icon C" width="103" height="86"/>

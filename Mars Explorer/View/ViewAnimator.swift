@@ -36,7 +36,7 @@ class ViewAnimator
     }
     
     // Animates the rover manifest panel with a flip animation
-    static func animateRoverManifestPanel(panel: UIView)
+    static func animatePanelFlipUp(panel: UIView)
     {
         UIView.transition(with: panel, duration: 0.35, options: .transitionFlipFromBottom, animations: nil, completion: nil)
     }

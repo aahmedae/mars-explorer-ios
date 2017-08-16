@@ -58,4 +58,30 @@ class WebRequestTests: XCTestCase
         }
     }
     
+    // Test out file downloads
+    func testFileDownloads()
+    {
+        let urlList = ["http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG",
+                       "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FRB_486265257EDR_F0481570FHAZ00323M_.JPG",
+                       "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/rcam/RLB_486265291EDR_F0481570RHAZ00323M_.JPG",
+                       "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/rcam/RRB_486265291EDR_F0481570RHAZ00323M_.JPG",
+                       "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/ncam/NLB_486272784EDR_F0481570NCAM00415M_.JPG",
+                       "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/ncam/NLB_486271176EDR_F0481570NCAM00322M_.JPG",
+                       "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/ncam/NLB_486270860EDR_F0481570NCAM00323M_.JPG",
+                       "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/ncam/NLB_486265192EDR_S0481570NCAM00546M_.JPG",
+                       "http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/ncam/NLB_486265119EDR_S0481570NCAM00546M_.JPG"]
+        
+        let promise = XCTestExpectation(description: "Files downloaded")
+        
+        WebRequest.shared.downloadFilesAtUrls(urls: urlList, tempDirectoryFolderName: "test-images") { (urls, error) in
+            if error != nil {
+                XCTFail("Error: \(error)")
+            }
+            else
+            {
+                XCTAssert(urls != nil && urls!.count == urlList.count)
+                promise.fulfill()
+            }
+        }
+    }
 }

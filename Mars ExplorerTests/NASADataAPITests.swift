@@ -22,13 +22,13 @@ class NASADataAPITests: XCTestCase
         NASADataAPI.shared.downloadRoverManifests { (manifests, error) in
             if error != nil
             {
-                print("Error in downloading manifests!: \(error!)")
+                XCTFail("Error in downloading manifests!: \(error!)")
             }
             else
             {
                 for (rover, manifest) in manifests!
                 {
-                    // check for rover name mathes and to ensure that the manifest dictionary is set correctly
+                    // check for rover name matches and to ensure that the manifest dictionary is set correctly
                     switch rover
                     {
                     case .curiousity:
@@ -52,6 +52,25 @@ class NASADataAPITests: XCTestCase
                         promise.fulfill()
                     }
                 }
+            }
+        }
+    }
+    
+    // Test out the rover sol photos download
+    func testRoverSolPhotos()
+    {
+        let promise = XCTestExpectation(description: "Rover Sol Photo Info Downloaded")
+        
+        NASADataAPI.shared.downloadRoverPhotos(rover: .curiousity, sol: 820) { (roverSolPhotos, error) in
+            if error != nil
+            {
+                XCTFail("Error in downloading sol photos")
+            }
+            else
+            {
+                XCTAssert(roverSolPhotos != nil)
+                XCTAssert(roverSolPhotos!.count == 52)
+                promise.fulfill()
             }
         }
     }

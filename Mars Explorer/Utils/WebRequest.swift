@@ -14,29 +14,42 @@ class WebRequest
 {
     // MARK:- Enums
     
-    enum RequestMethod: String {
+    enum RequestMethod: String
+    {
         case GET = "GET"
         case POST = "POST"
         case PUT = "PUT"
         case DELETE = "DELETE"
     }
     
-    enum WebRequestError {
+    enum WebRequestError
+    {
         case noConnection
         case serverError
         case timeout
         case invalidURL
+        case other
     }
     
     // MARK:- Properties
     
     // Singleton
     static var shared = WebRequest()
-    private init() {}
+    private init()
+    {
+        let config = URLSessionConfiguration.default
+        
+        config.timeoutIntervalForResource = 20
+        config.timeoutIntervalForRequest = 20
+        config.httpMaximumConnectionsPerHost = 1
+        
+        self.fileDownloadSession = URLSession(configuration: config)
+    }
     
     fileprivate let TIMEOUT_SECONDS: TimeInterval = 10
     
     fileprivate var globalSession = URLSession(configuration: .default)
+    fileprivate var fileDownloadSession: URLSession!
     
     // MARK:- Public API
     
@@ -85,6 +98,102 @@ class WebRequest
         else
         {
             callback(nil, .invalidURL)
+        }
+    }
+    
+    // Download data at the given list of urls
+    func downloadDataAtURLs(urls: [String], callback: @escaping ([Data]?, WebRequestError?) -> Void)
+    {
+        var datalist = [Data]()
+        let queue = DispatchQueue(label: "Data Download", qos: .userInitiated, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil)
+        
+        queue.async {
+            
+            for urlString in urls
+            {
+                if let url = URL(string: urlString)
+                {
+                    if let data = try? Data(contentsOf: url) {
+                        datalist.append(data)
+                    }
+                    else {
+                        callback(nil, .serverError)
+                        return
+                    }
+                }
+                else
+                {
+                    callback(nil, .serverError)
+                    return
+                }
+            }
+            
+            callback(datalist, nil)
+        }
+    }
+    
+    // Download the files at the given urls
+    // Calls the callback with the list of URLs where these files have been written to
+    func downloadFilesAtUrls(urls: [String], tempDirectoryFolderName: String, callback: @escaping ([URL]?, WebRequestError?) -> Void)
+    {
+        var tempLocations = [URL]()
+        let filemanager = FileManager.default
+        var filesdownloaded = 0
+        var expectedTotalFiles = urls.count
+        let path = filemanager.temporaryDirectory.appendingPathComponent(tempDirectoryFolderName)
+        
+        do {
+            try filemanager.createDirectory(at: path, withIntermediateDirectories: true, attributes: nil)
+        }
+        catch {
+            print("Failed to create directory: \(path.absoluteString)")
+        }
+        
+        for urlString in urls
+        {
+            if let downloadUrl = URL(string: urlString)
+            {
+                let task = fileDownloadSession.downloadTask(with: downloadUrl, completionHandler: { [weak self] (tempUrl, response, error) in
+                    if error != nil
+                    {
+                        expectedTotalFiles -= 1
+                        print("Error. Could not download: \(downloadUrl.absoluteString)\nMessage:\(error!.localizedDescription)")
+                        
+                        if filesdownloaded == expectedTotalFiles {
+                            callback(tempLocations, nil)
+                            return
+                        }
+                        
+                        self?.fileDownloadSession.delegateQueue.cancelAllOperations()
+                    }
+                    else if let url = tempUrl
+                    {
+                        // move file to the folder in the temp directory
+                        let filename = url.lastPathComponent
+                        let extenstion = url.pathExtension
+                        let fullpath = path.appendingPathComponent(filename, isDirectory: false).appendingPathExtension(extenstion)
+                        
+                        do
+                        {
+                            try filemanager.moveItem(at: url, to: fullpath)
+                            filesdownloaded += 1
+                            tempLocations.append(fullpath)
+                            
+                            print("\(filesdownloaded)/\(expectedTotalFiles) files downloaded")
+                            
+                            if filesdownloaded == expectedTotalFiles {
+                                callback(tempLocations, nil)
+                                return
+                            }
+                        }
+                        catch {
+                            print("Error in moving file \(url) to \(fullpath)")
+                            callback(nil, .other)
+                        }
+                    }
+                })
+                task.resume()
+            }
         }
     }
     
