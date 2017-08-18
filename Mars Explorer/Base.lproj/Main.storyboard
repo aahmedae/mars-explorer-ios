@@ -190,31 +190,31 @@
                                         <rect key="frame" x="221" y="76.5" width="271" height="155.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yey-tm-1yw">
-                                                <rect key="frame" x="0.0" y="0.5" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Te-TD-ywD">
-                                                <rect key="frame" x="0.0" y="34" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="33.5" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocH-WI-nha">
-                                                <rect key="frame" x="0.0" y="67.5" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="67" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5A-Tw-1w4">
-                                                <rect key="frame" x="0.0" y="101" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="100.5" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTY-cE-BEo">
-                                                <rect key="frame" x="0.0" y="134.5" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="134" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -363,7 +363,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utb-xe-DBC">
-                                        <rect key="frame" x="462" y="35" width="61.5" height="26.5"/>
+                                        <rect key="frame" x="462" y="35.5" width="61.5" height="26.5"/>
                                         <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -452,7 +452,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52X-tw-Hrl">
                                 <rect key="frame" x="368.5" y="322.5" width="287" height="123"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk3-n1-Bvn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk3-n1-Bvn">
                                         <rect key="frame" x="20" y="20" width="247" height="83"/>
                                         <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -467,13 +467,21 @@
                                     <constraint firstItem="hk3-n1-Bvn" firstAttribute="leading" secondItem="52X-tw-Hrl" secondAttribute="leading" constant="20" symbolic="YES" id="zHK-Hp-vfN"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUl-Y7-hQ4" customClass="NumberPadView" customModule="Mars_Explorer" customModuleProvider="target">
+                                <rect key="frame" x="205" y="57.5" width="614" height="461"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1as-dx-Pb0" firstAttribute="centerY" secondItem="oIl-dr-A6W" secondAttribute="centerY" id="0Ro-ae-Nhb"/>
                             <constraint firstItem="Pnm-rb-ZyI" firstAttribute="centerY" secondItem="oIl-dr-A6W" secondAttribute="centerY" id="38s-iU-VsA"/>
+                            <constraint firstItem="LUl-Y7-hQ4" firstAttribute="width" secondItem="oIl-dr-A6W" secondAttribute="width" multiplier="0.6" id="6tP-Dw-Pa4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1as-dx-Pb0" secondAttribute="trailing" id="AZM-wY-jFh"/>
+                            <constraint firstItem="LUl-Y7-hQ4" firstAttribute="centerX" secondItem="oIl-dr-A6W" secondAttribute="centerX" id="B64-QK-3g9"/>
                             <constraint firstItem="Pnm-rb-ZyI" firstAttribute="centerX" secondItem="oIl-dr-A6W" secondAttribute="centerX" id="CGK-gq-Xf3"/>
+                            <constraint firstItem="LUl-Y7-hQ4" firstAttribute="height" secondItem="oIl-dr-A6W" secondAttribute="height" multiplier="0.6" id="IQA-FM-w0r"/>
+                            <constraint firstItem="LUl-Y7-hQ4" firstAttribute="centerY" secondItem="oIl-dr-A6W" secondAttribute="centerY" multiplier="0.75" id="P4z-6Q-HpC"/>
                             <constraint firstItem="52X-tw-Hrl" firstAttribute="height" secondItem="Pnm-rb-ZyI" secondAttribute="height" multiplier="0.3" id="RZv-bQ-HHy"/>
                             <constraint firstItem="52X-tw-Hrl" firstAttribute="width" secondItem="Pnm-rb-ZyI" secondAttribute="width" multiplier="0.7" id="d1B-W7-jfh"/>
                             <constraint firstItem="52X-tw-Hrl" firstAttribute="centerY" secondItem="Pnm-rb-ZyI" secondAttribute="centerY" id="hok-yK-T9G"/>
@@ -493,6 +501,7 @@
                         <outlet property="messageLabel" destination="hk3-n1-Bvn" id="nJ5-q2-vl4"/>
                         <outlet property="messageView" destination="52X-tw-Hrl" id="Bon-cG-Ijr"/>
                         <outlet property="nextImageButton" destination="1as-dx-Pb0" id="TYx-Gq-H50"/>
+                        <outlet property="numberPadView" destination="LUl-Y7-hQ4" id="7j0-0F-lOb"/>
                         <outlet property="previousImageButton" destination="IJU-aZ-Xxa" id="DKO-U4-hbe"/>
                         <outlet property="roverButton" destination="1Co-oi-kyc" id="JOQ-Jz-Qoq"/>
                         <outlet property="scifiSpinner" destination="Pnm-rb-ZyI" id="759-SL-GMD"/>

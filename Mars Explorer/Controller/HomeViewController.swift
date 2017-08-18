@@ -139,7 +139,7 @@ class HomeViewController: UIViewController
         
         // show the rover manifest panel with an animation
         roverManifestPanel.isHidden = false
-        ViewAnimator.animatePanelFlipUp(panel: roverManifestPanel)
+        ViewAnimator.animatePanelFlipFromBottom(panel: roverManifestPanel)
         ViewBuilder.fillRoverManifestPanelWithInfo(panel: roverManifestPanel, rover: selectedRover!, manifest: manifests![selectedRover!]!)
         exploreButton.isHidden = false
     }

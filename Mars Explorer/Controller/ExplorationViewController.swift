@@ -10,10 +10,11 @@
 
 import UIKit
 
-class ExplorationViewController: UIViewController
+class ExplorationViewController: UIViewController, NumberPadViewDelegate
 {
     // MARK:- Outlets
     
+    @IBOutlet weak var numberPadView: NumberPadView!
     @IBOutlet weak var nextImageButton: UIButton!
     @IBOutlet weak var previousImageButton: UIButton!
     @IBOutlet weak var messageLabel: UILabel!
@@ -68,8 +69,7 @@ class ExplorationViewController: UIViewController
     fileprivate var currentImage: UIImage? = nil {
         didSet {
             if let image = currentImage {
-                view.layer.contents = image.cgImage
-                view.layer.contentsGravity = kCAGravityResizeAspectFill
+                ViewAnimator.animateViewLayerImageBackground(view: self.view, newImage: image)
             }
         }
     }
@@ -109,8 +109,9 @@ class ExplorationViewController: UIViewController
     // UI Setup
     fileprivate func setupUI()
     {
-        // background test image
-        currentImage = #imageLiteral(resourceName: "Rover_Mars_Test_Image")
+        // background default image
+        view.layer.contents = #imageLiteral(resourceName: "Rover_Mars_Test_Image").cgImage
+        view.layer.contentsGravity = kCAGravityResizeAspectFill
         
         // control panel
         ViewBuilder.setupTranslucentBlackViewWithGradientBorder(view: controlPanel)
@@ -121,6 +122,10 @@ class ExplorationViewController: UIViewController
         
         // loading panel hidden
         scifiSpinner.stopAnimating()
+        
+        // number pad view
+        numberPadView.isHidden = true
+        numberPadView.delegate = self
     }
     
     // Download data for the change in SOL and rover
@@ -128,6 +133,9 @@ class ExplorationViewController: UIViewController
     {
         //currentImages = [RoverCamera: [UIImage]]()
         controlPanel.isHidden = true
+        self.cameraButton.isEnabled = true
+        self.nextImageButton.isEnabled = true
+        self.previousImageButton.isEnabled = true
         
         scifiSpinner.startAnimating()
         messageView.isHidden = false
@@ -144,14 +152,26 @@ class ExplorationViewController: UIViewController
                 DispatchQueue.main.async
                 {
                     self?.cameraImages = photoUrls!
-                    self?.camera = photoUrls!.keys.first!
+                    
+                    if let camera = photoUrls!.keys.first
+                    {
+                        self?.camera = photoUrls!.keys.first!
+                        self?.messageView.isHidden = true
+                    }
+                    else
+                    {
+                        // no photos available for this sol
+                        self?.messageLabel.text = "No photos were taken on this SOL"
+                        self?.cameraButton.isEnabled = false
+                        self?.nextImageButton.isEnabled = false
+                        self?.previousImageButton.isEnabled = false
+                    }
                     
                     self?.scifiSpinner.stopAnimating()
-                    self?.messageView.isHidden = true
                     self?.controlPanel.isHidden = false
                     
                     SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
-                    ViewAnimator.animatePanelFlipUp(panel: (self?.controlPanel)!)
+                    ViewAnimator.animatePanelFlipFromBottom(panel: (self?.controlPanel)!)
                 }
                 
                 /*
@@ -211,15 +231,21 @@ class ExplorationViewController: UIViewController
         {
         case CONTROL_BUTTON_ID_CAMERA:
             let cameras = Array(cameraImages.keys)
-            var index = cameras.index(of: self.camera)!
-            index = (index + 1) % cameras.count
-            self.camera = cameras[index]
+            if var index = cameras.index(of: self.camera) {
+                index = (index + 1) % cameras.count
+                self.camera = cameras[index]
+            }
             
         case CONTROL_BUTTON_ID_ROVER:
             let rovers = [Rover.curiousity, Rover.opportunity, Rover.spirit]
             var index = rovers.index(of: self.rover)!
             index = (index + 1) % rovers.count
             self.rover = rovers[index]
+            
+        case CONTROL_BUTTON_ID_SOL:
+            SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
+            numberPadView.isHidden = false
+            ViewAnimator.animatePanelFlipFromTop(panel: numberPadView)
             
         case CONTROL_BUTTON_ID_SOL_INCREMENT:
             sol += 1
@@ -240,7 +266,6 @@ class ExplorationViewController: UIViewController
         if let photoUrls = cameraImages[camera]
         {
             currentImageIndex = (currentImageIndex + sender.tag) % photoUrls.count
-            print("Current Image Index: \(currentImageIndex)")
             let url = photoUrls[currentImageIndex]
             
             downloadPhotoAtURL(url: url, callback: { (image) in
@@ -248,6 +273,27 @@ class ExplorationViewController: UIViewController
                 SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
             })
         }
+    }
+    
+    // Number pad view events
+    
+    func numberpadView(view: NumberPadView, actionButtonPressed: NumberPadView.NumberPadAction)
+    {
+        SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
+        numberPadView.isHidden = true
+        
+        if actionButtonPressed == .ok
+        {
+            // ensure that the sol doesn't exceed the max sol for this rover
+            if sol > manifests[rover]!.totalSols {
+                sol = manifests[rover]!.totalSols
+            }
+            else {
+                sol = numberPadView.number
+            }
+        }
+        
+        numberPadView.clear()
     }
     
     // MARK:- Private Functions
