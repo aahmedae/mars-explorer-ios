@@ -31,15 +31,17 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
     
     // The rover, sol, and manifests to be set by the calling VC
     var manifests: [Rover: RoverManifest]!
+    var startingSol: Int? = nil
+    var startingRover: Rover? = nil
     
-    var rover: Rover = .curiousity {
+    fileprivate var rover: Rover = .curiousity {
         didSet {
             roverButton.setTitle(rover.rawValue, for: .normal)
             loadData()
         }
     }
     
-    var sol: Int = 1000 {
+    fileprivate var sol: Int = 1000 {
         didSet {
             solButton.setTitle("\(sol)", for: .normal)
             loadData()
@@ -102,8 +104,18 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         setupUI()
-        loadData()
+        
+        // set the starting properties if needed
+        if let sol = startingSol {
+            self.sol = sol
+        }
+        else if let rover = startingRover {
+            self.rover = rover
+        }
+        
+        //loadData()
     }
     
     // UI Setup

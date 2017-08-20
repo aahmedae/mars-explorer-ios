@@ -13,6 +13,7 @@
 		C31997451F44BFFD0057C957 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31997441F44BFFD0057C957 /* NumberPadView.swift */; };
 		C31997471F44E97F0057C957 /* NumberPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31997461F44E97F0057C957 /* NumberPadView.xib */; };
 		C31997491F4735450057C957 /* number_pad.wav in Resources */ = {isa = PBXBuildFile; fileRef = C31997481F4735450057C957 /* number_pad.wav */; };
+		C319974B1F4A35410057C957 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319974A1F4A35410057C957 /* CustomSegue.swift */; };
 		C31BDF821F35F8500011AD8D /* venus rising rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF811F35F8500011AD8D /* venus rising rg.ttf */; };
 		C31BDF841F35F85F0011AD8D /* nasalization-rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF831F35F85F0011AD8D /* nasalization-rg.ttf */; };
 		C31BDF871F376B990011AD8D /* sputnik-beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF861F376B990011AD8D /* sputnik-beep.mp3 */; };
@@ -65,6 +66,7 @@
 		C31997441F44BFFD0057C957 /* NumberPadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberPadView.swift; path = View/NumberPadView.swift; sourceTree = "<group>"; };
 		C31997461F44E97F0057C957 /* NumberPadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NumberPadView.xib; path = View/NumberPadView.xib; sourceTree = "<group>"; };
 		C31997481F4735450057C957 /* number_pad.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = number_pad.wav; sourceTree = "<group>"; };
+		C319974A1F4A35410057C957 /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSegue.swift; path = View/CustomSegue.swift; sourceTree = "<group>"; };
 		C31BDF811F35F8500011AD8D /* venus rising rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "venus rising rg.ttf"; sourceTree = "<group>"; };
 		C31BDF831F35F85F0011AD8D /* nasalization-rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nasalization-rg.ttf"; sourceTree = "<group>"; };
 		C31BDF861F376B990011AD8D /* sputnik-beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sputnik-beep.mp3"; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				C303298F1F3A74490053C86E /* SOLDialView.swift */,
 				C31997441F44BFFD0057C957 /* NumberPadView.swift */,
 				C31997461F44E97F0057C957 /* NumberPadView.xib */,
+				C319974A1F4A35410057C957 /* CustomSegue.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C319974B1F4A35410057C957 /* CustomSegue.swift in Sources */,
 				C31BDF8F1F3777610011AD8D /* SciFiActivitySpinner.swift in Sources */,
 				C39EEDEC1F34A53A00537227 /* AppDelegate.swift in Sources */,
 				C31BDFA21F38D34F0011AD8D /* UIConstants.swift in Sources */,

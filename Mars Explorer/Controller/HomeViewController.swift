@@ -8,14 +8,14 @@
 
 import UIKit
 
-class HomeViewController: UIViewController
+class HomeViewController: UIViewController, NumberPadViewDelegate
 {
     // MARK:- IBOutlets
+    @IBOutlet weak var numberPadView: NumberPadView!
     @IBOutlet weak var messageView: UIView!
     @IBOutlet weak var loadingMessageLabel: UILabel!
     @IBOutlet weak var scifiSpinner: SciFiActivitySpinner!
-    @IBOutlet weak var roverButton: UIButton!
-    @IBOutlet weak var solButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var roverSelectionPanel: UIView!
     @IBOutlet weak var roverManifestPanel: UIView!
     @IBOutlet var roverButtons: [UIButton]!
@@ -34,6 +34,7 @@ class HomeViewController: UIViewController
     fileprivate var manifests: [Rover: RoverManifest]? = nil
     
     fileprivate var selectedRover: Rover? = nil
+    fileprivate var selectedSol: Int? = nil
     
     // MARK:- Setup
     
@@ -68,44 +69,42 @@ class HomeViewController: UIViewController
         
         // ambience music
         SoundEffectPlayer.shared.playBackgroundAmbience(filename: UIConstants.BACKGROUND_AMBIENCE_PATH)
+        
+        // number pad view
+        numberPadView.isHidden = true
+        numberPadView.delegate = self
     }
     
     // MARK:- Events
     
-    // User taps on the button to decide on SOL or rover selection
-    @IBAction func buttonTapped(_ sender: UIButton)
+    // User taps on the start button to begin the experience
+    @IBAction func startButtonTapped(_ sender: UIButton)
     {
-        switch sender.tag
+        // hide the button as it will no longer be required
+        startButton.isHidden = true
+        
+        // download rover manifests if needed and show the rover selection panel
+        if manifests == nil
         {
-        case BUTTON_ID_SOL:
-            scifiSpinner.stopAnimating()
+            scifiSpinner.startAnimating()
+            loadingMessageLabel.text = "Downloading Rover Manifests..."
+            messageView.isHidden = false
             
-        case BUTTON_ID_ROVER:
-            if manifests == nil
-            {
-                scifiSpinner.startAnimating()
-                loadingMessageLabel.text = "Downloading Rover Manifests..."
-                messageView.isHidden = false
-                
-                NASADataAPI.shared.downloadRoverManifests(callback: { [weak self] (manifests, error) in
-                    DispatchQueue.main.async {
-                        ViewAnimator.animateRoverSelectionPanelEntry(panel: (self?.roverSelectionPanel)!)
-                        SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
-                        
-                        self?.scifiSpinner.stopAnimating()
-                        self?.messageView.isHidden = true
-                        
-                        if let manifests = manifests
-                        {
-                            self?.manifests = manifests
-                            self?.roverSelectionPanel.isHidden = false
-                        }
+            NASADataAPI.shared.downloadRoverManifests(callback: { [weak self] (manifests, error) in
+                DispatchQueue.main.async {
+                    ViewAnimator.animateRoverSelectionPanelEntry(panel: (self?.roverSelectionPanel)!)
+                    SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
+                    
+                    self?.scifiSpinner.stopAnimating()
+                    self?.messageView.isHidden = true
+                    
+                    if let manifests = manifests
+                    {
+                        self?.manifests = manifests
+                        self?.roverSelectionPanel.isHidden = false
                     }
-                })
-            }
-            
-        default:
-            return
+                }
+            })
         }
     }
     
@@ -147,6 +146,26 @@ class HomeViewController: UIViewController
     // User taps on the explore button to begin the explore experience
     @IBAction func exploreButtonTapped(_ sender: UIButton)
     {
+        // check if rover or sol was set and set property in VC accordingly
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ExploreViewController") as! ExplorationViewController
+        vc.manifests = manifests!
         
+        if let rover = selectedRover {
+            vc.startingRover = rover
+        }
+        else if let sol = selectedSol {
+            vc.startingSol = sol
+        }
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
+    // User taps on one of the buttons on the number pad view
+    func numberpadView(view: NumberPadView, actionButtonPressed: NumberPadView.NumberPadAction)
+    {
+        if actionButtonPressed == .ok {
+            selectedSol = numberPadView.number
+        }
     }
 }
