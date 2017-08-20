@@ -49,7 +49,7 @@ class NASADataAPI
                 if error != nil
                 {
                     print("Error in NASADataAPI: \(error!)")
-                    callback(nil, .serverError)
+                    callback(nil, error!)
                 }
                 else
                 {

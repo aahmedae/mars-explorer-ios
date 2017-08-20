@@ -290,6 +290,7 @@
                         <outletCollection property="roverButtons" destination="v1k-Kh-73R" collectionClass="NSMutableArray" id="gdl-Kx-WHm"/>
                         <outletCollection property="roverButtons" destination="vnH-g8-tVh" collectionClass="NSMutableArray" id="Se7-zD-eaM"/>
                         <outletCollection property="roverButtons" destination="stn-S7-rxV" collectionClass="NSMutableArray" id="8Wm-oA-OEn"/>
+                        <segue destination="dmH-9l-QK4" kind="custom" identifier="Segue_To_Explore_VC" customClass="CustomSegue" customModule="Mars_Explorer" customModuleProvider="target" id="leY-9a-pvK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIC-UT-SeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -463,11 +464,31 @@
                                 <rect key="frame" x="205" y="57.5" width="614" height="461"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IqN-7d-E5D">
+                                <rect key="frame" x="20" y="535" width="984" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQa-Da-a3p">
+                                        <rect key="frame" x="0.0" y="0.0" width="984" height="29"/>
+                                        <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.22352941179999999" green="0.79607843140000001" blue="0.84313725490000002" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BQa-Da-a3p" secondAttribute="trailing" id="1oM-OD-1uA"/>
+                                    <constraint firstItem="BQa-Da-a3p" firstAttribute="leading" secondItem="IqN-7d-E5D" secondAttribute="leading" id="JCp-L8-B3N"/>
+                                    <constraint firstItem="BQa-Da-a3p" firstAttribute="top" secondItem="IqN-7d-E5D" secondAttribute="top" id="jOh-TK-OE4"/>
+                                    <constraint firstAttribute="bottom" secondItem="BQa-Da-a3p" secondAttribute="bottom" id="yZ9-Pv-gDy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1as-dx-Pb0" firstAttribute="centerY" secondItem="oIl-dr-A6W" secondAttribute="centerY" id="0Ro-ae-Nhb"/>
                             <constraint firstItem="Pnm-rb-ZyI" firstAttribute="centerY" secondItem="oIl-dr-A6W" secondAttribute="centerY" id="38s-iU-VsA"/>
+                            <constraint firstItem="IqN-7d-E5D" firstAttribute="trailing" secondItem="4AH-TN-NA3" secondAttribute="trailing" id="4z0-gO-ogg"/>
+                            <constraint firstItem="4AH-TN-NA3" firstAttribute="top" secondItem="IqN-7d-E5D" secondAttribute="bottom" constant="4" id="65p-Bl-Qbn"/>
                             <constraint firstItem="LUl-Y7-hQ4" firstAttribute="width" secondItem="oIl-dr-A6W" secondAttribute="width" multiplier="0.6" id="6tP-Dw-Pa4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1as-dx-Pb0" secondAttribute="trailing" id="AZM-wY-jFh"/>
                             <constraint firstItem="LUl-Y7-hQ4" firstAttribute="centerX" secondItem="oIl-dr-A6W" secondAttribute="centerX" id="B64-QK-3g9"/>
@@ -479,7 +500,9 @@
                             <constraint firstItem="52X-tw-Hrl" firstAttribute="centerY" secondItem="Pnm-rb-ZyI" secondAttribute="centerY" id="hok-yK-T9G"/>
                             <constraint firstItem="4AH-TN-NA3" firstAttribute="height" secondItem="oIl-dr-A6W" secondAttribute="height" multiplier="0.25" id="jaV-Gy-cMa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4AH-TN-NA3" secondAttribute="trailing" id="kxU-RS-W8a"/>
+                            <constraint firstItem="IqN-7d-E5D" firstAttribute="leading" secondItem="4AH-TN-NA3" secondAttribute="leading" id="nzl-BZ-Ggr"/>
                             <constraint firstItem="TsC-na-Tbt" firstAttribute="top" secondItem="4AH-TN-NA3" secondAttribute="bottom" constant="8" symbolic="YES" id="oEV-h3-IFM"/>
+                            <constraint firstItem="IqN-7d-E5D" firstAttribute="height" secondItem="4AH-TN-NA3" secondAttribute="height" multiplier="0.15" id="ped-dF-hxf"/>
                             <constraint firstItem="52X-tw-Hrl" firstAttribute="centerX" secondItem="Pnm-rb-ZyI" secondAttribute="centerX" id="q3c-p7-r4G"/>
                             <constraint firstItem="IJU-aZ-Xxa" firstAttribute="centerY" secondItem="oIl-dr-A6W" secondAttribute="centerY" id="qsI-hs-mUt"/>
                             <constraint firstAttribute="leadingMargin" secondItem="IJU-aZ-Xxa" secondAttribute="leading" id="r5Y-wO-l2l"/>
@@ -489,6 +512,8 @@
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="xo0-Xc-1FP" id="12j-BE-ZKa"/>
+                        <outlet property="cameraNameLabel" destination="BQa-Da-a3p" id="Zid-En-myR"/>
+                        <outlet property="cameraNameView" destination="IqN-7d-E5D" id="qDW-5C-fC6"/>
                         <outlet property="controlPanel" destination="4AH-TN-NA3" id="wpV-6S-wL8"/>
                         <outlet property="messageLabel" destination="hk3-n1-Bvn" id="nJ5-q2-vl4"/>
                         <outlet property="messageView" destination="52X-tw-Hrl" id="Bon-cG-Ijr"/>

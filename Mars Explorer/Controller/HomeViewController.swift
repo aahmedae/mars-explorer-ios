@@ -31,6 +31,8 @@ class HomeViewController: UIViewController, NumberPadViewDelegate
     fileprivate let ROVER_BUTTON_ID_OPPORTUNITY = 1
     fileprivate let ROVER_BUTTON_ID_SPIRIT = 2
     
+    fileprivate let SEGUE_TO_EXPLORE_VC = "Segue_To_Explore_VC"
+    
     fileprivate var manifests: [Rover: RoverManifest]? = nil
     
     fileprivate var selectedRover: Rover? = nil
@@ -146,6 +148,7 @@ class HomeViewController: UIViewController, NumberPadViewDelegate
     // User taps on the explore button to begin the explore experience
     @IBAction func exploreButtonTapped(_ sender: UIButton)
     {
+        /*
         // check if rover or sol was set and set property in VC accordingly
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ExploreViewController") as! ExplorationViewController
@@ -159,6 +162,9 @@ class HomeViewController: UIViewController, NumberPadViewDelegate
         }
         
         present(vc, animated: true, completion: nil)
+        */
+        
+        performSegue(withIdentifier: SEGUE_TO_EXPLORE_VC, sender: nil)
     }
     
     // User taps on one of the buttons on the number pad view
@@ -166,6 +172,15 @@ class HomeViewController: UIViewController, NumberPadViewDelegate
     {
         if actionButtonPressed == .ok {
             selectedSol = numberPadView.number
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let vc = segue.destination as? ExplorationViewController
+        {
+            vc.manifests = self.manifests!
+            vc.startingRover = self.selectedRover!
         }
     }
 }

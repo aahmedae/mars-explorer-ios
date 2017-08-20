@@ -14,6 +14,8 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
 {
     // MARK:- Outlets
     
+    @IBOutlet weak var cameraNameView: UIView!
+    @IBOutlet weak var cameraNameLabel: UILabel!
     @IBOutlet weak var numberPadView: NumberPadView!
     @IBOutlet weak var nextImageButton: UIButton!
     @IBOutlet weak var previousImageButton: UIButton!
@@ -50,20 +52,13 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
     
     var camera: RoverCamera = .FHAZ {
         didSet {
-            /*
-            let images = currentImages[camera]
-            if let image = images?.first {
-                currentImage = image
-                currentImageIndex = 0
-            }
-            */
-            
             if let photoUrl = self.cameraImages[camera]?.first {
                 downloadPhotoAtURL(url: photoUrl, callback: { (image) in
                     self.currentImage = image
                     self.currentImageIndex = 0
                 })
                 cameraButton.setTitle(camera.rawValue, for: .normal)
+                cameraNameLabel.text = RoverCamera.cameraFullNames[camera]!
             }
         }
     }
@@ -145,6 +140,7 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
     {
         //currentImages = [RoverCamera: [UIImage]]()
         controlPanel.isHidden = true
+        cameraNameView.isHidden = true
         self.cameraButton.isEnabled = true
         self.nextImageButton.isEnabled = true
         self.previousImageButton.isEnabled = true
@@ -161,9 +157,10 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
                 DispatchQueue.main.async {
                     // hide loading views and show error message
                     self?.messageView.isHidden = false
-                    self?.messageLabel.text = "There was an error in downloading the data"
+                    self?.messageLabel.text = (error! == .timeout ? "Slow Connection: The server is taking too long to respond.": "There was an error in downloading the data")
                     self?.scifiSpinner.stopAnimating()
-                    controlPanel.isHidden = false
+                    self?.controlPanel.isHidden = false
+                    self?.cameraNameView.isHidden = false
                 }
             }
             else
@@ -188,6 +185,7 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
                     
                     self?.scifiSpinner.stopAnimating()
                     self?.controlPanel.isHidden = false
+                    self?.cameraNameView.isHidden = false
                     
                     SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
                     ViewAnimator.animatePanelFlipFromBottom(panel: (self?.controlPanel)!)
