@@ -76,6 +76,9 @@ class WebRequest
                 if error != nil
                 {
                     print("Error in request in WebRequest: \(error!.localizedDescription)")
+                    if Int(errno) == NSURLErrorTimedOut {
+                        print("TIMED OUT!")
+                    }
                     callback(nil, .serverError)
                 }
                 else if let data = data

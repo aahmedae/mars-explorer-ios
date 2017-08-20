@@ -158,6 +158,13 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
             if error != nil
             {
                 print("Error in downloading rover photo URLs")
+                DispatchQueue.main.async {
+                    // hide loading views and show error message
+                    self?.messageView.isHidden = false
+                    self?.messageLabel.text = "There was an error in downloading the data"
+                    self?.scifiSpinner.stopAnimating()
+                    controlPanel.isHidden = false
+                }
             }
             else
             {
@@ -185,51 +192,6 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
                     SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
                     ViewAnimator.animatePanelFlipFromBottom(panel: (self?.controlPanel)!)
                 }
-                
-                /*
-                
-                let totalKeys = photoUrls!.keys.count
-                var cameraImagesDownloaded = 0
-                
-                // download all the photos for this rover filtered by camera
-                for (camera, photos) in photoUrls!
-                {
-                    WebRequest.shared.downloadFilesAtUrls(urls: photos, tempDirectoryFolderName: camera.rawValue, callback: { [weak self] (urls, error) in
-                        if error != nil {
-                            print("Error in downloading photo list")
-                        }
-                        else
-                        {
-                            let cameraInClosure = camera
-                            cameraImagesDownloaded += 1
-                            
-                            for url in urls!
-                            {
-                                if let image = UIImage(contentsOfFile: url.absoluteString)
-                                {
-                                    if self?.currentImages[cameraInClosure] == nil {
-                                        self?.currentImages[cameraInClosure] = [UIImage]()
-                                    }
-                                    self?.currentImages[cameraInClosure]!.append(image)
-                                }
-                            }
-                            
-                            print("\(urls!.count) Images downloaded for camera: \(cameraInClosure.rawValue)")
-                            
-                            if cameraImagesDownloaded == totalKeys
-                            {
-                                DispatchQueue.main.async {
-                                    self?.controlPanel.isHidden = false
-                                    SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
-                                    ViewAnimator.animatePanelFlipUp(panel: (self?.controlPanel)!)
-                                    self?.scifiSpinner.stopAnimating()
-                                    self?.messageView.isHidden = true
-                                }
-                            }
-                        }
-                    })
-                }
-                */
             }
         }
     }
