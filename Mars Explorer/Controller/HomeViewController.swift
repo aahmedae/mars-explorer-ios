@@ -183,4 +183,10 @@ class HomeViewController: UIViewController, NumberPadViewDelegate
             vc.startingRover = self.selectedRover!
         }
     }
+    
+    // User returns from exploration VC through an unwind segue
+    @IBAction func unwindedToHomeViewController(segue: UIStoryboardSegue)
+    {
+        
+    }
 }

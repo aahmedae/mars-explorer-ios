@@ -1,16 +1,16 @@
 //
-//  CustomSegue.swift
+//  CustomUnwindSegue.swift
 //  Mars Explorer
 //
 //  Created by Asad Ahmed on 8/21/17.
 //  Copyright © 2017 Asad Ahmed. All rights reserved.
 //
-//  Represents a custom modal segue using throughout the application
+//  Segue with custom logic for unwinding. Used throughout the application
 //
 
 import UIKit
 
-class CustomSegue: UIStoryboardSegue
+class CustomUnwindSegue: UIStoryboardSegue
 {
     override func perform()
     {
@@ -18,18 +18,17 @@ class CustomSegue: UIStoryboardSegue
         {
             if let destinationView = self.destination.view
             {
-                destinationView.frame = UIScreen.main.bounds
                 let window = UIApplication.shared.keyWindow
                 window?.insertSubview(destinationView, aboveSubview: sourceView)
                 
-                destinationView.alpha = 0.0
+                destinationView.transform = CGAffineTransform.identity
                 
                 UIView.animate(withDuration: 0.35, animations: { 
-                    sourceView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
                     sourceView.alpha = 0.0
+                    sourceView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
                     destinationView.alpha = 1.0
                 }, completion: { (_) in
-                    self.source.present(self.destination, animated: false, completion: nil)
+                    self.source.dismiss(animated: false, completion: nil)
                 })
             }
         }

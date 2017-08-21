@@ -482,6 +482,18 @@
                                     <constraint firstAttribute="bottom" secondItem="BQa-Da-a3p" secondAttribute="bottom" id="yZ9-Pv-gDy"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBf-WY-hfl">
+                                <rect key="frame" x="938.5" y="28" width="65.5" height="65.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FBf-WY-hfl" secondAttribute="height" multiplier="1:1" id="GoJ-F0-9Bh"/>
+                                </constraints>
+                                <state key="normal" image="Close Button"/>
+                                <state key="selected" image="Close Button Highlighted"/>
+                                <state key="highlighted" image="Close Button Highlighted"/>
+                                <connections>
+                                    <action selector="quitButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="VqI-GS-anr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -493,9 +505,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="1as-dx-Pb0" secondAttribute="trailing" id="AZM-wY-jFh"/>
                             <constraint firstItem="LUl-Y7-hQ4" firstAttribute="centerX" secondItem="oIl-dr-A6W" secondAttribute="centerX" id="B64-QK-3g9"/>
                             <constraint firstItem="Pnm-rb-ZyI" firstAttribute="centerX" secondItem="oIl-dr-A6W" secondAttribute="centerX" id="CGK-gq-Xf3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FBf-WY-hfl" secondAttribute="trailing" id="Fox-tm-hOD"/>
                             <constraint firstItem="LUl-Y7-hQ4" firstAttribute="height" secondItem="oIl-dr-A6W" secondAttribute="height" multiplier="0.6" id="IQA-FM-w0r"/>
                             <constraint firstItem="LUl-Y7-hQ4" firstAttribute="centerY" secondItem="oIl-dr-A6W" secondAttribute="centerY" multiplier="0.75" id="P4z-6Q-HpC"/>
+                            <constraint firstItem="FBf-WY-hfl" firstAttribute="width" secondItem="oIl-dr-A6W" secondAttribute="width" multiplier="0.064" id="RWz-RK-bSX"/>
                             <constraint firstItem="52X-tw-Hrl" firstAttribute="height" secondItem="Pnm-rb-ZyI" secondAttribute="height" multiplier="0.3" id="RZv-bQ-HHy"/>
+                            <constraint firstItem="FBf-WY-hfl" firstAttribute="top" secondItem="Qc1-bO-6ua" secondAttribute="bottom" constant="8" symbolic="YES" id="Ysx-df-MPE"/>
                             <constraint firstItem="52X-tw-Hrl" firstAttribute="width" secondItem="Pnm-rb-ZyI" secondAttribute="width" multiplier="0.7" id="d1B-W7-jfh"/>
                             <constraint firstItem="52X-tw-Hrl" firstAttribute="centerY" secondItem="Pnm-rb-ZyI" secondAttribute="centerY" id="hok-yK-T9G"/>
                             <constraint firstItem="4AH-TN-NA3" firstAttribute="height" secondItem="oIl-dr-A6W" secondAttribute="height" multiplier="0.25" id="jaV-Gy-cMa"/>
@@ -525,9 +540,11 @@
                         <outlet property="solButton" destination="Zsp-L0-MWO" id="SY9-rG-wtu"/>
                         <outlet property="solDecrementButton" destination="PoM-xQ-jO8" id="gZw-zK-B0Y"/>
                         <outlet property="solIncrementButton" destination="nnT-6T-cVx" id="wdp-Cq-vvI"/>
+                        <segue destination="dUc-Hd-fm0" kind="unwind" identifier="Unwind_To_Home_VC" customClass="CustomUnwindSegue" customModule="Mars_Explorer" customModuleProvider="target" unwindAction="unwindedToHomeViewControllerWithSegue:" id="8FW-ql-crc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPj-it-dMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dUc-Hd-fm0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-128.3203125" y="-320.3125"/>
         </scene>
@@ -535,6 +552,8 @@
     <resources>
         <image name="Button" width="208" height="112"/>
         <image name="Button Highlighted" width="208" height="112"/>
+        <image name="Close Button" width="91" height="91"/>
+        <image name="Close Button Highlighted" width="91" height="91"/>
         <image name="Decrement Sol Button" width="76" height="114"/>
         <image name="Decrement Sol Button Highlighted" width="74" height="112"/>
         <image name="Increment Sol Button" width="76" height="114"/>

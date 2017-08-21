@@ -85,7 +85,6 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
     
     fileprivate var cameraImages = [RoverCamera: [String]]()
     fileprivate var currentImageIndex = 0
-    //fileprivate var currentImages = [RoverCamera: [UIImage]]()
     
     // tags to refer to the control buttons
     fileprivate let CONTROL_BUTTON_ID_SOL = 0
@@ -93,6 +92,8 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
     fileprivate let CONTROL_BUTTON_ID_SOL_INCREMENT = 1
     fileprivate let CONTROL_BUTTON_ID_ROVER = 2
     fileprivate let CONTROL_BUTTON_ID_CAMERA = 3
+    
+    fileprivate let SEGUE_UNWIND_TO_HOME_VC = "Unwind_To_Home_VC"
     
     // MARK:- Setup
     
@@ -247,8 +248,7 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
         }
     }
     
-    // Number pad view events
-    
+    // Number pad view action button tapped to either accept or cancel entry
     func numberpadView(view: NumberPadView, actionButtonPressed: NumberPadView.NumberPadAction)
     {
         SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
@@ -266,6 +266,12 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
         }
         
         numberPadView.clear()
+    }
+    
+    // User taps on the quit button to go back to the home screen
+    @IBAction func quitButtonTapped(_ sender: UIButton)
+    {
+        performSegue(withIdentifier: SEGUE_UNWIND_TO_HOME_VC, sender: self)
     }
     
     // MARK:- Private Functions

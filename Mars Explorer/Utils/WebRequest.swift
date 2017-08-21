@@ -46,7 +46,7 @@ class WebRequest
         self.fileDownloadSession = URLSession(configuration: config)
     }
     
-    fileprivate let TIMEOUT_SECONDS: TimeInterval = 10
+    fileprivate let TIMEOUT_SECONDS: TimeInterval = 20
     
     fileprivate var globalSession = URLSession(configuration: .default)
     fileprivate var fileDownloadSession: URLSession!
