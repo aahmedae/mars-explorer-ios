@@ -18,7 +18,7 @@ class SciFiActivitySpinner: UIView
     
     fileprivate let ANIMATION_TO_VALUE = 2 * Double.pi
     fileprivate let ANIMATION_DURATION: CFTimeInterval = 10
-    fileprivate let SOUND_FILE_PATH = Bundle.main.path(forResource: "sputnik-beep", ofType: "mp3")!
+    fileprivate let SOUND_FILE_PATH = Bundle.main.path(forResource: "radar_scan", ofType: "wav")!
     
     required init?(coder aDecoder: NSCoder)
     {

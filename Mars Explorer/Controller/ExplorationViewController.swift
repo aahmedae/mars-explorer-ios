@@ -14,6 +14,7 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
 {
     // MARK:- Outlets
     
+    @IBOutlet weak var imageIndexLabel: UILabel!
     @IBOutlet weak var cameraNameView: UIView!
     @IBOutlet weak var cameraNameLabel: UILabel!
     @IBOutlet weak var numberPadView: NumberPadView!
@@ -83,8 +84,18 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
         }
     }
     
+    fileprivate var currentImageIndex = 0 {
+        didSet {
+            if let images = cameraImages[camera] {
+                imageIndexLabel.text = "\(currentImageIndex + 1) of \(images.count)"
+            }
+            else {
+                imageIndexLabel.text = ""
+            }
+        }
+    }
+    
     fileprivate var cameraImages = [RoverCamera: [String]]()
-    fileprivate var currentImageIndex = 0
     
     // tags to refer to the control buttons
     fileprivate let CONTROL_BUTTON_ID_SOL = 0
@@ -110,8 +121,6 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
         else if let rover = startingRover {
             self.rover = rover
         }
-        
-        //loadData()
     }
     
     // UI Setup
@@ -134,6 +143,9 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
         // number pad view
         numberPadView.isHidden = true
         numberPadView.delegate = self
+        
+        // image index label
+        imageIndexLabel.text = ""
     }
     
     // Download data for the change in SOL and rover
@@ -238,7 +250,7 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
     {
         if let photoUrls = cameraImages[camera]
         {
-            currentImageIndex = (currentImageIndex + sender.tag) % photoUrls.count
+            currentImageIndex = ((currentImageIndex + sender.tag >= 0) ? ((currentImageIndex + sender.tag) % photoUrls.count) : (photoUrls.count - 1))
             let url = photoUrls[currentImageIndex]
             
             downloadPhotoAtURL(url: url, callback: { (image) in

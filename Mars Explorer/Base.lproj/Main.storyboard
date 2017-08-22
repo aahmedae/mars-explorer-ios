@@ -174,31 +174,31 @@
                                         <rect key="frame" x="221" y="76.5" width="271" height="155.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yey-tm-1yw">
-                                                <rect key="frame" x="0.0" y="0.5" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Te-TD-ywD">
-                                                <rect key="frame" x="0.0" y="34" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="33.5" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocH-WI-nha">
-                                                <rect key="frame" x="0.0" y="67.5" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="67" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5A-Tw-1w4">
-                                                <rect key="frame" x="0.0" y="101" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="100.5" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTY-cE-BEo">
-                                                <rect key="frame" x="0.0" y="134.5" width="271" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="134" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -467,6 +467,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IqN-7d-E5D">
                                 <rect key="frame" x="20" y="535" width="984" height="29"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 of 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIv-AL-nYK">
+                                        <rect key="frame" x="20" y="0.0" width="964" height="29"/>
+                                        <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQa-Da-a3p">
                                         <rect key="frame" x="0.0" y="0.0" width="984" height="29"/>
                                         <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="12"/>
@@ -477,8 +483,12 @@
                                 <color key="backgroundColor" red="0.22352941179999999" green="0.79607843140000001" blue="0.84313725490000002" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="BQa-Da-a3p" secondAttribute="trailing" id="1oM-OD-1uA"/>
+                                    <constraint firstItem="RIv-AL-nYK" firstAttribute="leading" secondItem="IqN-7d-E5D" secondAttribute="leading" constant="20" symbolic="YES" id="2le-QN-Np8"/>
                                     <constraint firstItem="BQa-Da-a3p" firstAttribute="leading" secondItem="IqN-7d-E5D" secondAttribute="leading" id="JCp-L8-B3N"/>
+                                    <constraint firstAttribute="trailing" secondItem="RIv-AL-nYK" secondAttribute="trailing" id="Kjg-Av-rqh"/>
+                                    <constraint firstAttribute="bottom" secondItem="RIv-AL-nYK" secondAttribute="bottom" id="WP7-IT-FuX"/>
                                     <constraint firstItem="BQa-Da-a3p" firstAttribute="top" secondItem="IqN-7d-E5D" secondAttribute="top" id="jOh-TK-OE4"/>
+                                    <constraint firstItem="RIv-AL-nYK" firstAttribute="top" secondItem="IqN-7d-E5D" secondAttribute="top" id="pug-uP-CYe"/>
                                     <constraint firstAttribute="bottom" secondItem="BQa-Da-a3p" secondAttribute="bottom" id="yZ9-Pv-gDy"/>
                                 </constraints>
                             </view>
@@ -530,6 +540,7 @@
                         <outlet property="cameraNameLabel" destination="BQa-Da-a3p" id="Zid-En-myR"/>
                         <outlet property="cameraNameView" destination="IqN-7d-E5D" id="qDW-5C-fC6"/>
                         <outlet property="controlPanel" destination="4AH-TN-NA3" id="wpV-6S-wL8"/>
+                        <outlet property="imageIndexLabel" destination="RIv-AL-nYK" id="Pt8-hA-haw"/>
                         <outlet property="messageLabel" destination="hk3-n1-Bvn" id="nJ5-q2-vl4"/>
                         <outlet property="messageView" destination="52X-tw-Hrl" id="Bon-cG-Ijr"/>
                         <outlet property="nextImageButton" destination="1as-dx-Pb0" id="TYx-Gq-H50"/>

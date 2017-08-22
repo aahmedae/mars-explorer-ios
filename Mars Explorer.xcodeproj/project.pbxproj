@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C303298E1F3A71820053C86E /* ExplorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303298D1F3A71820053C86E /* ExplorationViewController.swift */; };
 		C30329931F3E53DA0053C86E /* TV static effect.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C30329921F3E53D90053C86E /* TV static effect.mp4 */; };
+		C3062E491F4CE7800080B3E3 /* radar_scan.wav in Resources */ = {isa = PBXBuildFile; fileRef = C3062E481F4CE7800080B3E3 /* radar_scan.wav */; };
 		C31997451F44BFFD0057C957 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31997441F44BFFD0057C957 /* NumberPadView.swift */; };
 		C31997471F44E97F0057C957 /* NumberPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31997461F44E97F0057C957 /* NumberPadView.xib */; };
 		C31997491F4735450057C957 /* number_pad.wav in Resources */ = {isa = PBXBuildFile; fileRef = C31997481F4735450057C957 /* number_pad.wav */; };
@@ -17,8 +18,6 @@
 		C31BDF821F35F8500011AD8D /* venus rising rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF811F35F8500011AD8D /* venus rising rg.ttf */; };
 		C31BDF841F35F85F0011AD8D /* nasalization-rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF831F35F85F0011AD8D /* nasalization-rg.ttf */; };
 		C31BDF871F376B990011AD8D /* sputnik-beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF861F376B990011AD8D /* sputnik-beep.mp3 */; };
-		C31BDF8A1F376BCC0011AD8D /* hawquindar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF881F376BCC0011AD8D /* hawquindar.mp3 */; };
-		C31BDF8B1F376BCC0011AD8D /* hskquindar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C31BDF891F376BCC0011AD8D /* hskquindar.mp3 */; };
 		C31BDF8D1F376C540011AD8D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF8C1F376C540011AD8D /* HomeViewController.swift */; };
 		C31BDF8F1F3777610011AD8D /* SciFiActivitySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF8E1F3777610011AD8D /* SciFiActivitySpinner.swift */; };
 		C31BDF921F386E7B0011AD8D /* WebRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF911F386E7B0011AD8D /* WebRequest.swift */; };
@@ -30,7 +29,6 @@
 		C31BDFA01F38D2B20011AD8D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDF9F1F38D2B20011AD8D /* Extensions.swift */; };
 		C31BDFA21F38D34F0011AD8D /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BDFA11F38D34F0011AD8D /* UIConstants.swift */; };
 		C31BDFA41F38D6A00011AD8D /* ui_select.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C31BDFA31F38D6A00011AD8D /* ui_select.mp3 */; };
-		C31BDFA61F38D8630011AD8D /* film_static.wav in Resources */ = {isa = PBXBuildFile; fileRef = C31BDFA51F38D8630011AD8D /* film_static.wav */; };
 		C31BDFA81F38D9CC0011AD8D /* space_ambience.wav in Resources */ = {isa = PBXBuildFile; fileRef = C31BDFA71F38D9CC0011AD8D /* space_ambience.wav */; };
 		C382EDAD1F3A137E00F7899C /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382EDAC1F3A137E00F7899C /* ViewBuilder.swift */; };
 		C382EDAF1F3A226500F7899C /* ViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C382EDAE1F3A226500F7899C /* ViewAnimator.swift */; };
@@ -62,6 +60,7 @@
 /* Begin PBXFileReference section */
 		C303298D1F3A71820053C86E /* ExplorationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExplorationViewController.swift; path = Controller/ExplorationViewController.swift; sourceTree = "<group>"; };
 		C30329921F3E53D90053C86E /* TV static effect.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TV static effect.mp4"; sourceTree = "<group>"; };
+		C3062E481F4CE7800080B3E3 /* radar_scan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = radar_scan.wav; sourceTree = "<group>"; };
 		C31997441F44BFFD0057C957 /* NumberPadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberPadView.swift; path = View/NumberPadView.swift; sourceTree = "<group>"; };
 		C31997461F44E97F0057C957 /* NumberPadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NumberPadView.xib; path = View/NumberPadView.xib; sourceTree = "<group>"; };
 		C31997481F4735450057C957 /* number_pad.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = number_pad.wav; sourceTree = "<group>"; };
@@ -70,8 +69,6 @@
 		C31BDF811F35F8500011AD8D /* venus rising rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "venus rising rg.ttf"; sourceTree = "<group>"; };
 		C31BDF831F35F85F0011AD8D /* nasalization-rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nasalization-rg.ttf"; sourceTree = "<group>"; };
 		C31BDF861F376B990011AD8D /* sputnik-beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sputnik-beep.mp3"; sourceTree = "<group>"; };
-		C31BDF881F376BCC0011AD8D /* hawquindar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hawquindar.mp3; sourceTree = "<group>"; };
-		C31BDF891F376BCC0011AD8D /* hskquindar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hskquindar.mp3; sourceTree = "<group>"; };
 		C31BDF8C1F376C540011AD8D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controller/HomeViewController.swift; sourceTree = "<group>"; };
 		C31BDF8E1F3777610011AD8D /* SciFiActivitySpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SciFiActivitySpinner.swift; path = View/SciFiActivitySpinner.swift; sourceTree = "<group>"; };
 		C31BDF911F386E7B0011AD8D /* WebRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebRequest.swift; path = Utils/WebRequest.swift; sourceTree = "<group>"; };
@@ -83,7 +80,6 @@
 		C31BDF9F1F38D2B20011AD8D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Utils/Extensions.swift; sourceTree = "<group>"; };
 		C31BDFA11F38D34F0011AD8D /* UIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIConstants.swift; path = View/UIConstants.swift; sourceTree = "<group>"; };
 		C31BDFA31F38D6A00011AD8D /* ui_select.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ui_select.mp3; sourceTree = "<group>"; };
-		C31BDFA51F38D8630011AD8D /* film_static.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = film_static.wav; sourceTree = "<group>"; };
 		C31BDFA71F38D9CC0011AD8D /* space_ambience.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = space_ambience.wav; sourceTree = "<group>"; };
 		C382EDAC1F3A137E00F7899C /* ViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewBuilder.swift; path = View/ViewBuilder.swift; sourceTree = "<group>"; };
 		C382EDAE1F3A226500F7899C /* ViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewAnimator.swift; path = View/ViewAnimator.swift; sourceTree = "<group>"; };
@@ -146,12 +142,10 @@
 		C31BDF851F376B8A0011AD8D /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				C3062E481F4CE7800080B3E3 /* radar_scan.wav */,
 				C31997481F4735450057C957 /* number_pad.wav */,
 				C31BDFA71F38D9CC0011AD8D /* space_ambience.wav */,
-				C31BDFA51F38D8630011AD8D /* film_static.wav */,
 				C31BDFA31F38D6A00011AD8D /* ui_select.mp3 */,
-				C31BDF881F376BCC0011AD8D /* hawquindar.mp3 */,
-				C31BDF891F376BCC0011AD8D /* hskquindar.mp3 */,
 				C31BDF861F376B990011AD8D /* sputnik-beep.mp3 */,
 			);
 			name = Sounds;
@@ -398,14 +392,12 @@
 				C30329931F3E53DA0053C86E /* TV static effect.mp4 in Resources */,
 				C39EEDF51F34A53A00537227 /* Assets.xcassets in Resources */,
 				C31997471F44E97F0057C957 /* NumberPadView.xib in Resources */,
-				C31BDF8A1F376BCC0011AD8D /* hawquindar.mp3 in Resources */,
 				C31BDF871F376B990011AD8D /* sputnik-beep.mp3 in Resources */,
 				C31BDFA41F38D6A00011AD8D /* ui_select.mp3 in Resources */,
 				C31BDFA81F38D9CC0011AD8D /* space_ambience.wav in Resources */,
+				C3062E491F4CE7800080B3E3 /* radar_scan.wav in Resources */,
 				C31997491F4735450057C957 /* number_pad.wav in Resources */,
 				C31BDF841F35F85F0011AD8D /* nasalization-rg.ttf in Resources */,
-				C31BDF8B1F376BCC0011AD8D /* hskquindar.mp3 in Resources */,
-				C31BDFA61F38D8630011AD8D /* film_static.wav in Resources */,
 				C39EEDF31F34A53A00537227 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
