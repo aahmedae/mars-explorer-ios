@@ -139,7 +139,6 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
     // Download data for the change in SOL and rover
     fileprivate func loadData()
     {
-        //currentImages = [RoverCamera: [UIImage]]()
         controlPanel.isHidden = true
         cameraNameView.isHidden = true
         self.cameraButton.isEnabled = true
@@ -158,7 +157,7 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
                 DispatchQueue.main.async {
                     // hide loading views and show error message
                     self?.messageView.isHidden = false
-                    self?.messageLabel.text = (error! == .timeout ? "Slow Connection: The server is taking too long to respond.": "There was an error in downloading the data")
+                    self?.messageLabel.text = (error! == .timeout ? "Slow Connection: The server is taking too long to respond.": "Download Error: There was an error in downloading the data")
                     self?.scifiSpinner.stopAnimating()
                     self?.controlPanel.isHidden = false
                     self?.cameraNameView.isHidden = false
@@ -190,6 +189,7 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
                     
                     SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
                     ViewAnimator.animatePanelFlipFromBottom(panel: (self?.controlPanel)!)
+                    ViewAnimator.animatePanelFlipFromTop(panel: (self?.cameraNameView)!)
                 }
             }
         }

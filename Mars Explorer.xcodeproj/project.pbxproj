@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C303298E1F3A71820053C86E /* ExplorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303298D1F3A71820053C86E /* ExplorationViewController.swift */; };
-		C30329901F3A74490053C86E /* SOLDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C303298F1F3A74490053C86E /* SOLDialView.swift */; };
 		C30329931F3E53DA0053C86E /* TV static effect.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C30329921F3E53D90053C86E /* TV static effect.mp4 */; };
 		C31997451F44BFFD0057C957 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31997441F44BFFD0057C957 /* NumberPadView.swift */; };
 		C31997471F44E97F0057C957 /* NumberPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31997461F44E97F0057C957 /* NumberPadView.xib */; };
@@ -62,7 +61,6 @@
 
 /* Begin PBXFileReference section */
 		C303298D1F3A71820053C86E /* ExplorationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExplorationViewController.swift; path = Controller/ExplorationViewController.swift; sourceTree = "<group>"; };
-		C303298F1F3A74490053C86E /* SOLDialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SOLDialView.swift; path = View/SOLDialView.swift; sourceTree = "<group>"; };
 		C30329921F3E53D90053C86E /* TV static effect.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TV static effect.mp4"; sourceTree = "<group>"; };
 		C31997441F44BFFD0057C957 /* NumberPadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberPadView.swift; path = View/NumberPadView.swift; sourceTree = "<group>"; };
 		C31997461F44E97F0057C957 /* NumberPadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NumberPadView.xib; path = View/NumberPadView.xib; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 				C31BDFA11F38D34F0011AD8D /* UIConstants.swift */,
 				C382EDAC1F3A137E00F7899C /* ViewBuilder.swift */,
 				C382EDAE1F3A226500F7899C /* ViewAnimator.swift */,
-				C303298F1F3A74490053C86E /* SOLDialView.swift */,
 				C31997441F44BFFD0057C957 /* NumberPadView.swift */,
 				C31997461F44E97F0057C957 /* NumberPadView.xib */,
 				C319974A1F4A35410057C957 /* CustomSegue.swift */,
@@ -441,7 +438,6 @@
 				C31BDFA21F38D34F0011AD8D /* UIConstants.swift in Sources */,
 				C31BDF921F386E7B0011AD8D /* WebRequest.swift in Sources */,
 				C31BDFA01F38D2B20011AD8D /* Extensions.swift in Sources */,
-				C30329901F3A74490053C86E /* SOLDialView.swift in Sources */,
 				C382EDB31F3A3A0E00F7899C /* SoundEffectPlayer.swift in Sources */,
 				C31997451F44BFFD0057C957 /* NumberPadView.swift in Sources */,
 				C31BDF941F386EE80011AD8D /* SwiftyJSON.swift in Sources */,

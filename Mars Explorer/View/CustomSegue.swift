@@ -23,11 +23,13 @@ class CustomSegue: UIStoryboardSegue
                 window?.insertSubview(destinationView, aboveSubview: sourceView)
                 
                 destinationView.alpha = 0.0
+                destinationView.transform = CGAffineTransform(scaleX: 2, y: 2)
                 
                 UIView.animate(withDuration: 0.35, animations: { 
                     sourceView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
                     sourceView.alpha = 0.0
                     destinationView.alpha = 1.0
+                    destinationView.transform = CGAffineTransform.identity
                 }, completion: { (_) in
                     self.source.present(self.destination, animated: false, completion: nil)
                 })
