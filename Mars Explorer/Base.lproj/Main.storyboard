@@ -242,16 +242,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOP-ld-mL3" customClass="NumberPadView" customModule="Mars_Explorer" customModuleProvider="target">
-                                <rect key="frame" x="256" y="128" width="512" height="512"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ecm-75-JOc" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="57n-G0-1xq"/>
-                            <constraint firstItem="ZOP-ld-mL3" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" id="9Mx-Zc-G7H"/>
-                            <constraint firstItem="ZOP-ld-mL3" firstAttribute="height" secondItem="dcZ-ZI-XsG" secondAttribute="height" id="COY-wr-Xmj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="diU-F1-3WS" secondAttribute="trailing" id="Cka-8h-emV"/>
                             <constraint firstItem="geu-PO-C88" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" id="DsZ-Ng-MD7"/>
                             <constraint firstItem="dcZ-ZI-XsG" firstAttribute="width" secondItem="pok-A6-rD8" secondAttribute="width" multiplier="0.5" id="EZI-ZT-Kg3"/>
@@ -264,12 +258,10 @@
                             <constraint firstItem="y5y-aF-OgI" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="XAx-NU-DvC"/>
                             <constraint firstItem="nbG-JS-0ga" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="daG-k9-Q8c"/>
                             <constraint firstItem="dcZ-ZI-XsG" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="ejT-f4-Jtl"/>
-                            <constraint firstItem="ZOP-ld-mL3" firstAttribute="width" secondItem="dcZ-ZI-XsG" secondAttribute="width" id="fpW-9e-st0"/>
                             <constraint firstItem="fgj-tE-o0A" firstAttribute="top" secondItem="vOn-Lq-G24" secondAttribute="bottom" constant="20" id="j1K-RV-q3i"/>
                             <constraint firstItem="geu-PO-C88" firstAttribute="width" secondItem="dcZ-ZI-XsG" secondAttribute="width" multiplier="0.65" id="jwZ-4x-cPT"/>
                             <constraint firstItem="nbG-JS-0ga" firstAttribute="height" secondItem="pok-A6-rD8" secondAttribute="height" multiplier="0.4" id="lSC-zJ-tFn"/>
                             <constraint firstItem="nbG-JS-0ga" firstAttribute="width" secondItem="y5y-aF-OgI" secondAttribute="width" id="lnK-f6-iLl"/>
-                            <constraint firstItem="ZOP-ld-mL3" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="noa-od-Nd1"/>
                             <constraint firstItem="y5y-aF-OgI" firstAttribute="width" secondItem="dcZ-ZI-XsG" secondAttribute="width" id="olh-26-VBD"/>
                             <constraint firstItem="y5y-aF-OgI" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" id="pl3-vI-abE"/>
                             <constraint firstItem="ecm-75-JOc" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" id="ugp-IT-Swb"/>
@@ -281,7 +273,6 @@
                         <outlet property="exploreButton" destination="vOn-Lq-G24" id="EOk-ax-PSo"/>
                         <outlet property="loadingMessageLabel" destination="CJp-Bc-MLv" id="JGz-QY-7Hb"/>
                         <outlet property="messageView" destination="geu-PO-C88" id="0zQ-m1-CzC"/>
-                        <outlet property="numberPadView" destination="ZOP-ld-mL3" id="An8-Qr-l6v"/>
                         <outlet property="roverManifestPanel" destination="nbG-JS-0ga" id="G5z-MC-nPw"/>
                         <outlet property="roverSelectionPanel" destination="y5y-aF-OgI" id="aCP-z0-rRy"/>
                         <outlet property="roverSelectionPanelCenterYConstraint" destination="pl3-vI-abE" id="mnW-GB-vAC"/>

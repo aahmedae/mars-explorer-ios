@@ -82,6 +82,36 @@ class ViewBuilder
         view.layer.addSublayer(layer)
     }
     
+    // Sets the rover selection panel's state to select the given rover. Nil sets all to unselected state.
+    static func setRoverSelectionPanelState(selectedRover: Rover?, buttons: [UIButton], curiosityButtonID: Int, opportunityButtonID: Int, spiritButtonID: Int)
+    {
+        // deselect all first
+        for button in buttons
+        {
+            switch button.tag
+            {
+            case curiosityButtonID:
+                button.setImage(#imageLiteral(resourceName: "Rover Icon A "), for: .normal)
+                
+            case opportunityButtonID:
+                button.setImage(#imageLiteral(resourceName: "Rover Icon B"), for: .normal)
+                
+            case spiritButtonID:
+                button.setImage(#imageLiteral(resourceName: "Rover Icon C"), for: .normal)
+                
+            default:
+                return
+            }
+        }
+        
+        // select the one if provided with a selected rover
+        if let rover = selectedRover
+        {
+            let roverButtonIDs = [Rover.curiousity: curiosityButtonID, Rover.opportunity: opportunityButtonID, Rover.spirit: spiritButtonID]
+            buttons.first(where: { $0.tag == roverButtonIDs[rover]! })!.setImage(#imageLiteral(resourceName: "Rover Icon Selected"), for: .normal)
+        }
+    }
+    
     // Play or pause the video for the static view using the AVLayer
     static func setTVStaticVideoStatus(shouldPause: Bool, view: UIView)
     {

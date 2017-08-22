@@ -8,10 +8,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, NumberPadViewDelegate
+class HomeViewController: UIViewController
 {
     // MARK:- IBOutlets
-    @IBOutlet weak var numberPadView: NumberPadView!
     @IBOutlet weak var messageView: UIView!
     @IBOutlet weak var loadingMessageLabel: UILabel!
     @IBOutlet weak var scifiSpinner: SciFiActivitySpinner!
@@ -35,8 +34,11 @@ class HomeViewController: UIViewController, NumberPadViewDelegate
     
     fileprivate var manifests: [Rover: RoverManifest]? = nil
     
-    fileprivate var selectedRover: Rover? = nil
-    fileprivate var selectedSol: Int? = nil
+    fileprivate var selectedRover: Rover? = nil {
+        didSet {
+            ViewBuilder.setRoverSelectionPanelState(selectedRover: selectedRover, buttons: roverButtons, curiosityButtonID: ROVER_BUTTON_ID_CURIOSITY, opportunityButtonID: ROVER_BUTTON_ID_OPPORTUNITY, spiritButtonID: ROVER_BUTTON_ID_SPIRIT)
+        }
+    }
     
     // MARK:- Setup
     
@@ -71,10 +73,6 @@ class HomeViewController: UIViewController, NumberPadViewDelegate
         
         // ambience music
         SoundEffectPlayer.shared.playBackgroundAmbience(filename: UIConstants.BACKGROUND_AMBIENCE_PATH)
-        
-        // number pad view
-        numberPadView.isHidden = true
-        numberPadView.delegate = self
     }
     
     // MARK:- Events
@@ -148,31 +146,7 @@ class HomeViewController: UIViewController, NumberPadViewDelegate
     // User taps on the explore button to begin the explore experience
     @IBAction func exploreButtonTapped(_ sender: UIButton)
     {
-        /*
-        // check if rover or sol was set and set property in VC accordingly
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ExploreViewController") as! ExplorationViewController
-        vc.manifests = manifests!
-        
-        if let rover = selectedRover {
-            vc.startingRover = rover
-        }
-        else if let sol = selectedSol {
-            vc.startingSol = sol
-        }
-        
-        present(vc, animated: true, completion: nil)
-        */
-        
         performSegue(withIdentifier: SEGUE_TO_EXPLORE_VC, sender: nil)
-    }
-    
-    // User taps on one of the buttons on the number pad view
-    func numberpadView(view: NumberPadView, actionButtonPressed: NumberPadView.NumberPadAction)
-    {
-        if actionButtonPressed == .ok {
-            selectedSol = numberPadView.number
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
