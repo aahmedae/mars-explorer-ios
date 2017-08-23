@@ -22,6 +22,9 @@ class UIConstants
     // UI sound effect path
     static let UI_SOUND_EFFECT_PATH = Bundle.main.path(forResource: "ui_select", ofType: "mp3")!
     
+    // Shut down sound effect path
+    static let UI_SOUND_SHUT_DOWN = Bundle.main.path(forResource: "shut_down", ofType: "wav")!
+    
     // Background ambience
     static let BACKGROUND_AMBIENCE_PATH = Bundle.main.path(forResource: "space_ambience", ofType: "wav")!
 }

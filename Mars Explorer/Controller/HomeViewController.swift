@@ -20,6 +20,7 @@ class HomeViewController: UIViewController
     @IBOutlet var roverButtons: [UIButton]!
     @IBOutlet weak var exploreButton: UIButton!
     @IBOutlet weak var roverSelectionPanelCenterYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var aboutPanel: UIView!
     
     // MARK:- Variables
     
@@ -73,6 +74,10 @@ class HomeViewController: UIViewController
         
         // ambience music
         SoundEffectPlayer.shared.playBackgroundAmbience(filename: UIConstants.BACKGROUND_AMBIENCE_PATH)
+        
+        // about panel
+        ViewBuilder.setupTranslucentBlackViewWithGradientBorder(view: aboutPanel)
+        aboutPanel.isHidden = true
     }
     
     // MARK:- Events
@@ -156,6 +161,21 @@ class HomeViewController: UIViewController
             vc.manifests = self.manifests!
             vc.startingRover = self.selectedRover!
         }
+    }
+    
+    // About button to view info about the app
+    @IBAction func aboutButtonTapped(_ sender: UIButton)
+    {
+        aboutPanel.isHidden = false
+        SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
+        ViewAnimator.animatePanelFlipFromTop(panel: aboutPanel)
+    }
+    
+    // User taps on the close button to hide the about panel
+    @IBAction func aboutPanelCloseButtonTapped(_ sender: UIButton)
+    {
+        aboutPanel.isHidden = true
+        SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_EFFECT_PATH)
     }
     
     // User returns from exploration VC through an unwind segue

@@ -283,6 +283,8 @@ class ExplorationViewController: UIViewController, NumberPadViewDelegate
     // User taps on the quit button to go back to the home screen
     @IBAction func quitButtonTapped(_ sender: UIButton)
     {
+        scifiSpinner.stopAnimating()
+        SoundEffectPlayer.shared.playSoundEffectOnce(filename: UIConstants.UI_SOUND_SHUT_DOWN)
         performSegue(withIdentifier: SEGUE_UNWIND_TO_HOME_VC, sender: self)
     }
     

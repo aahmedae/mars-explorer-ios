@@ -38,6 +38,7 @@
 		C39EEDF51F34A53A00537227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39EEDF41F34A53A00537227 /* Assets.xcassets */; };
 		C39EEDF81F34A53A00537227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39EEDF61F34A53A00537227 /* LaunchScreen.storyboard */; };
 		C39EEE0E1F34A53A00537227 /* Mars_ExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EEE0D1F34A53A00537227 /* Mars_ExplorerUITests.swift */; };
+		C3D3ABEC1F4E39B9003DD967 /* shut_down.wav in Resources */ = {isa = PBXBuildFile; fileRef = C3D3ABEB1F4E39B9003DD967 /* shut_down.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		C39EEE091F34A53A00537227 /* Mars ExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mars ExplorerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39EEE0D1F34A53A00537227 /* Mars_ExplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_ExplorerUITests.swift; sourceTree = "<group>"; };
 		C39EEE0F1F34A53A00537227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3D3ABEB1F4E39B9003DD967 /* shut_down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shut_down.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		C31BDF851F376B8A0011AD8D /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				C3D3ABEB1F4E39B9003DD967 /* shut_down.wav */,
 				C3062E481F4CE7800080B3E3 /* radar_scan.wav */,
 				C31997481F4735450057C957 /* number_pad.wav */,
 				C31BDFA71F38D9CC0011AD8D /* space_ambience.wav */,
@@ -390,6 +393,7 @@
 				C39EEDF81F34A53A00537227 /* LaunchScreen.storyboard in Resources */,
 				C31BDF821F35F8500011AD8D /* venus rising rg.ttf in Resources */,
 				C30329931F3E53DA0053C86E /* TV static effect.mp4 in Resources */,
+				C3D3ABEC1F4E39B9003DD967 /* shut_down.wav in Resources */,
 				C39EEDF51F34A53A00537227 /* Assets.xcassets in Resources */,
 				C31997471F44E97F0057C957 /* NumberPadView.xib in Resources */,
 				C31BDF871F376B990011AD8D /* sputnik-beep.mp3 in Resources */,

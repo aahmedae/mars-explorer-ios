@@ -61,10 +61,10 @@
                                         <rect key="frame" x="20" y="20" width="472" height="114"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oP5-xs-KLR">
-                                                <rect key="frame" x="0.0" y="3" width="152" height="108"/>
+                                                <rect key="frame" x="0.0" y="3" width="152" height="108.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1k-Kh-73R">
-                                                        <rect key="frame" x="24.5" y="0.0" width="103" height="86"/>
+                                                        <rect key="frame" x="24" y="0.0" width="104.5" height="86"/>
                                                         <state key="normal" image="Rover Icon A "/>
                                                         <state key="selected" image="Rover Icon Selected"/>
                                                         <state key="highlighted" image="Rover Icon Selected"/>
@@ -73,7 +73,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curiousity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMv-2P-PEG">
-                                                        <rect key="frame" x="24.5" y="94" width="103" height="14"/>
+                                                        <rect key="frame" x="24" y="94" width="104.5" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -84,10 +84,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n96-Jp-XFZ">
-                                                <rect key="frame" x="160" y="3" width="152" height="108"/>
+                                                <rect key="frame" x="160" y="3" width="152" height="108.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnH-g8-tVh">
-                                                        <rect key="frame" x="24.5" y="0.0" width="103" height="86"/>
+                                                        <rect key="frame" x="14" y="0.0" width="124.5" height="86"/>
                                                         <state key="normal" image="Rover Icon B"/>
                                                         <state key="selected" image="Rover Icon Selected"/>
                                                         <state key="highlighted" image="Rover Icon Selected"/>
@@ -96,7 +96,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opportunity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2X-cE-qD5">
-                                                        <rect key="frame" x="24.5" y="94" width="103" height="14"/>
+                                                        <rect key="frame" x="14" y="94" width="124.5" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -107,7 +107,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bca-W3-R4z">
-                                                <rect key="frame" x="320" y="3" width="152" height="108"/>
+                                                <rect key="frame" x="320" y="3" width="152" height="108.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stn-S7-rxV">
                                                         <rect key="frame" x="24.5" y="0.0" width="103" height="86"/>
@@ -119,7 +119,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spirit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-NX-0Il">
-                                                        <rect key="frame" x="24.5" y="94" width="103" height="14"/>
+                                                        <rect key="frame" x="24.5" y="94" width="103" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -165,40 +165,40 @@
                                         <rect key="frame" x="8" y="23" width="205" height="261"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curiousity" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFm-sd-V3t">
-                                        <rect key="frame" x="221" y="23" width="271" height="26"/>
+                                        <rect key="frame" x="221" y="23" width="271" height="26.5"/>
                                         <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="F4V-Lm-zOM">
-                                        <rect key="frame" x="221" y="78" width="271" height="153"/>
+                                        <rect key="frame" x="221" y="76" width="271" height="155.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yey-tm-1yw">
-                                                <rect key="frame" x="0.0" y="0.5" width="271" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Te-TD-ywD">
-                                                <rect key="frame" x="0.0" y="33.5" width="271" height="21"/>
+                                                <rect key="frame" x="0.0" y="33.5" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocH-WI-nha">
-                                                <rect key="frame" x="0.0" y="66.5" width="271" height="21"/>
+                                                <rect key="frame" x="0.0" y="67" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5A-Tw-1w4">
-                                                <rect key="frame" x="0.0" y="99.5" width="271" height="21"/>
+                                                <rect key="frame" x="0.0" y="100.5" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTY-cE-BEo">
-                                                <rect key="frame" x="0.0" y="132.5" width="271" height="21"/>
+                                                <rect key="frame" x="0.0" y="134" width="271" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -220,6 +220,92 @@
                                     <constraint firstAttribute="trailing" secondItem="F4V-Lm-zOM" secondAttribute="trailing" constant="20" symbolic="YES" id="zfF-Hx-eVS"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jl4-1q-PC9">
+                                <rect key="frame" x="256" y="253" width="512" height="307"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5v-mF-NRy">
+                                        <rect key="frame" x="457" y="8" width="51" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="M5v-mF-NRy" secondAttribute="height" multiplier="1:1" id="Don-Od-Oju"/>
+                                        </constraints>
+                                        <state key="normal" image="Close Button"/>
+                                        <state key="selected" image="Close Button Highlighted"/>
+                                        <state key="highlighted" image="Close Button Highlighted"/>
+                                        <connections>
+                                            <action selector="aboutPanelCloseButtonTapped:" destination="JIk-9B-Nkc" eventType="touchUpInside" id="ArA-YH-5Jt"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpq-Ee-1oH">
+                                        <rect key="frame" x="20" y="20" width="472" height="24"/>
+                                        <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Development: Asad Ahmed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgw-k7-qYb">
+                                        <rect key="frame" x="20" y="52" width="472" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI/UX Design: Asad Ahmed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-N4-iH1">
+                                        <rect key="frame" x="20" y="81.5" width="472" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Thanks: NASA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBz-nD-Qfg">
+                                        <rect key="frame" x="20" y="111" width="472" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“Mars is there, waiting to be reached.”" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVq-fH-WF8">
+                                        <rect key="frame" x="20" y="162.5" width="472" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Buzz Aldrin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f84-gL-qs9">
+                                        <rect key="frame" x="20" y="192" width="472" height="17"/>
+                                        <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: 1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4av-Cq-Avr">
+                                        <rect key="frame" x="20" y="265.5" width="472" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cpq-Ee-1oH" secondAttribute="trailing" constant="20" symbolic="YES" id="0K0-7H-vBD"/>
+                                    <constraint firstItem="wVq-fH-WF8" firstAttribute="trailing" secondItem="XBz-nD-Qfg" secondAttribute="trailing" id="0u8-5I-KAW"/>
+                                    <constraint firstItem="M5v-mF-NRy" firstAttribute="width" secondItem="jl4-1q-PC9" secondAttribute="width" multiplier="0.1" id="87N-TB-K6B"/>
+                                    <constraint firstItem="4av-Cq-Avr" firstAttribute="trailing" secondItem="cpq-Ee-1oH" secondAttribute="trailing" id="A5U-Xy-W5f"/>
+                                    <constraint firstItem="cvT-N4-iH1" firstAttribute="top" secondItem="Vgw-k7-qYb" secondAttribute="bottom" constant="8" symbolic="YES" id="Cc7-A1-FNZ"/>
+                                    <constraint firstItem="XBz-nD-Qfg" firstAttribute="trailing" secondItem="cvT-N4-iH1" secondAttribute="trailing" id="Cm5-FF-DpZ"/>
+                                    <constraint firstItem="wVq-fH-WF8" firstAttribute="leading" secondItem="XBz-nD-Qfg" secondAttribute="leading" id="Jvg-bU-CmU"/>
+                                    <constraint firstItem="f84-gL-qs9" firstAttribute="trailing" secondItem="wVq-fH-WF8" secondAttribute="trailing" id="NVe-7V-Oe2"/>
+                                    <constraint firstItem="XBz-nD-Qfg" firstAttribute="top" secondItem="cvT-N4-iH1" secondAttribute="bottom" constant="8" symbolic="YES" id="Ncz-Vw-CJb"/>
+                                    <constraint firstAttribute="bottom" secondItem="4av-Cq-Avr" secondAttribute="bottom" constant="20" symbolic="YES" id="NlT-Xd-E4N"/>
+                                    <constraint firstItem="cpq-Ee-1oH" firstAttribute="leading" secondItem="jl4-1q-PC9" secondAttribute="leading" constant="20" symbolic="YES" id="OLF-6D-MuF"/>
+                                    <constraint firstItem="f84-gL-qs9" firstAttribute="top" secondItem="wVq-fH-WF8" secondAttribute="bottom" constant="8" symbolic="YES" id="SZu-pE-YV3"/>
+                                    <constraint firstItem="Vgw-k7-qYb" firstAttribute="top" secondItem="cpq-Ee-1oH" secondAttribute="bottom" constant="8" symbolic="YES" id="Sjz-kS-it4"/>
+                                    <constraint firstItem="f84-gL-qs9" firstAttribute="leading" secondItem="wVq-fH-WF8" secondAttribute="leading" id="Vt4-Qc-l5G"/>
+                                    <constraint firstItem="cvT-N4-iH1" firstAttribute="leading" secondItem="Vgw-k7-qYb" secondAttribute="leading" id="Xl5-kv-4kM"/>
+                                    <constraint firstItem="wVq-fH-WF8" firstAttribute="top" secondItem="XBz-nD-Qfg" secondAttribute="bottom" constant="30" id="eVi-kI-590"/>
+                                    <constraint firstItem="XBz-nD-Qfg" firstAttribute="leading" secondItem="cvT-N4-iH1" secondAttribute="leading" id="g9a-df-McK"/>
+                                    <constraint firstItem="4av-Cq-Avr" firstAttribute="leading" secondItem="cpq-Ee-1oH" secondAttribute="leading" id="hXi-gE-mMe"/>
+                                    <constraint firstItem="Vgw-k7-qYb" firstAttribute="leading" secondItem="cpq-Ee-1oH" secondAttribute="leading" id="kMc-Kp-gpm"/>
+                                    <constraint firstItem="cvT-N4-iH1" firstAttribute="trailing" secondItem="Vgw-k7-qYb" secondAttribute="trailing" id="qLq-zn-V3U"/>
+                                    <constraint firstItem="Vgw-k7-qYb" firstAttribute="trailing" secondItem="cpq-Ee-1oH" secondAttribute="trailing" id="qiV-NB-Y0K"/>
+                                    <constraint firstAttribute="trailing" secondItem="M5v-mF-NRy" secondAttribute="trailing" constant="4" id="vl2-IQ-SEC"/>
+                                    <constraint firstItem="M5v-mF-NRy" firstAttribute="top" secondItem="jl4-1q-PC9" secondAttribute="top" constant="8" id="vpV-Mi-28o"/>
+                                    <constraint firstItem="cpq-Ee-1oH" firstAttribute="top" secondItem="jl4-1q-PC9" secondAttribute="top" constant="20" symbolic="YES" id="wyv-Z6-8re"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOn-Lq-G24">
                                 <rect key="frame" x="408" y="636" width="208" height="112"/>
                                 <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="24"/>
@@ -237,25 +323,38 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MARS EXPLORER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diU-F1-3WS">
-                                <rect key="frame" x="20" y="28" width="984" height="63"/>
+                                <rect key="frame" x="20" y="28" width="984" height="64.5"/>
                                 <fontDescription key="fontDescription" name="NasalizationRg-Regular" family="Nasalization" pointSize="54"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRc-A9-wPW">
+                                <rect key="frame" x="948" y="692" width="56" height="56"/>
+                                <state key="normal" image="About Icon"/>
+                                <state key="selected" image="About Icon Highlighted"/>
+                                <state key="highlighted" image="About Icon Highlighted"/>
+                                <connections>
+                                    <action selector="aboutButtonTapped:" destination="JIk-9B-Nkc" eventType="touchUpInside" id="fHa-BJ-v5T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jl4-1q-PC9" firstAttribute="bottom" secondItem="nbG-JS-0ga" secondAttribute="bottom" id="415-el-KfE"/>
                             <constraint firstItem="ecm-75-JOc" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="57n-G0-1xq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="diU-F1-3WS" secondAttribute="trailing" id="Cka-8h-emV"/>
                             <constraint firstItem="geu-PO-C88" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" id="DsZ-Ng-MD7"/>
                             <constraint firstItem="dcZ-ZI-XsG" firstAttribute="width" secondItem="pok-A6-rD8" secondAttribute="width" multiplier="0.5" id="EZI-ZT-Kg3"/>
                             <constraint firstItem="nbG-JS-0ga" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" multiplier="1.06" id="Ik2-95-5Gs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xRc-A9-wPW" secondAttribute="trailing" id="Lhi-6Y-iKC"/>
                             <constraint firstItem="geu-PO-C88" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="No6-aR-ugV"/>
                             <constraint firstItem="diU-F1-3WS" firstAttribute="leading" secondItem="pok-A6-rD8" secondAttribute="leadingMargin" id="RsJ-Ci-QfY"/>
                             <constraint firstItem="y5y-aF-OgI" firstAttribute="height" secondItem="pok-A6-rD8" secondAttribute="height" multiplier="0.2" id="S99-b3-OPQ"/>
+                            <constraint firstItem="fgj-tE-o0A" firstAttribute="top" secondItem="xRc-A9-wPW" secondAttribute="bottom" constant="20" id="TA0-tq-9XV"/>
                             <constraint firstItem="vOn-Lq-G24" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="VyR-Zh-JkB"/>
                             <constraint firstItem="dcZ-ZI-XsG" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" id="WYA-dl-Puj"/>
                             <constraint firstItem="y5y-aF-OgI" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="XAx-NU-DvC"/>
+                            <constraint firstItem="jl4-1q-PC9" firstAttribute="trailing" secondItem="nbG-JS-0ga" secondAttribute="trailing" id="cNA-3S-Cch"/>
                             <constraint firstItem="nbG-JS-0ga" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="daG-k9-Q8c"/>
                             <constraint firstItem="dcZ-ZI-XsG" firstAttribute="centerX" secondItem="pok-A6-rD8" secondAttribute="centerX" id="ejT-f4-Jtl"/>
                             <constraint firstItem="fgj-tE-o0A" firstAttribute="top" secondItem="vOn-Lq-G24" secondAttribute="bottom" constant="20" id="j1K-RV-q3i"/>
@@ -264,12 +363,15 @@
                             <constraint firstItem="nbG-JS-0ga" firstAttribute="width" secondItem="y5y-aF-OgI" secondAttribute="width" id="lnK-f6-iLl"/>
                             <constraint firstItem="y5y-aF-OgI" firstAttribute="width" secondItem="dcZ-ZI-XsG" secondAttribute="width" id="olh-26-VBD"/>
                             <constraint firstItem="y5y-aF-OgI" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" id="pl3-vI-abE"/>
+                            <constraint firstItem="jl4-1q-PC9" firstAttribute="top" secondItem="nbG-JS-0ga" secondAttribute="top" id="rQR-Ft-IFG"/>
+                            <constraint firstItem="jl4-1q-PC9" firstAttribute="leading" secondItem="nbG-JS-0ga" secondAttribute="leading" id="tYM-No-o92"/>
                             <constraint firstItem="ecm-75-JOc" firstAttribute="centerY" secondItem="pok-A6-rD8" secondAttribute="centerY" id="ugp-IT-Swb"/>
                             <constraint firstItem="diU-F1-3WS" firstAttribute="top" secondItem="7Me-ph-Is3" secondAttribute="bottom" constant="8" symbolic="YES" id="vNe-IG-egB"/>
                             <constraint firstItem="geu-PO-C88" firstAttribute="height" secondItem="dcZ-ZI-XsG" secondAttribute="height" multiplier="0.2" id="yuM-qa-7HO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="aboutPanel" destination="jl4-1q-PC9" id="aGL-z7-mku"/>
                         <outlet property="exploreButton" destination="vOn-Lq-G24" id="EOk-ax-PSo"/>
                         <outlet property="loadingMessageLabel" destination="CJp-Bc-MLv" id="JGz-QY-7Hb"/>
                         <outlet property="messageView" destination="geu-PO-C88" id="0zQ-m1-CzC"/>
@@ -317,8 +419,12 @@
                                                 <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="18"/>
                                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                                 <state key="normal" title="Curiosity" backgroundImage="Button"/>
-                                                <state key="selected" backgroundImage="Button Highlighted"/>
-                                                <state key="highlighted" backgroundImage="Button Highlighted"/>
+                                                <state key="selected" backgroundImage="Button Highlighted">
+                                                    <color key="titleColor" red="0.22352941179999999" green="0.79607843140000001" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted" backgroundImage="Button Highlighted">
+                                                    <color key="titleColor" red="0.22352941179999999" green="0.79607843140000001" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="controlButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="x4J-XE-TCm"/>
                                                 </connections>
@@ -338,8 +444,12 @@
                                                 <rect key="frame" x="0.0" y="56" width="208" height="96"/>
                                                 <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="18"/>
                                                 <state key="normal" title="FHAZ" backgroundImage="Button"/>
-                                                <state key="selected" backgroundImage="Button Highlighted"/>
-                                                <state key="highlighted" backgroundImage="Button Highlighted"/>
+                                                <state key="selected" backgroundImage="Button Highlighted">
+                                                    <color key="titleColor" red="0.22352941179999999" green="0.79607843140000001" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted" backgroundImage="Button Highlighted">
+                                                    <color key="titleColor" red="0.22352941179999999" green="0.79607843140000001" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="controlButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="2bD-JV-3PJ"/>
                                                 </connections>
@@ -368,8 +478,12 @@
                                                 <rect key="frame" x="88" y="0.0" width="208" height="96"/>
                                                 <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="18"/>
                                                 <state key="normal" title="1000" backgroundImage="Button"/>
-                                                <state key="selected" backgroundImage="Button Highlighted"/>
-                                                <state key="highlighted" backgroundImage="Button Highlighted"/>
+                                                <state key="selected" backgroundImage="Button Highlighted">
+                                                    <color key="titleColor" red="0.22352941179999999" green="0.79607843140000001" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted" backgroundImage="Button Highlighted">
+                                                    <color key="titleColor" red="0.22352941179999999" green="0.79607843140000001" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="controlButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="tId-0G-uhA"/>
                                                 </connections>
@@ -406,14 +520,18 @@
                             </view>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1as-dx-Pb0">
                                 <rect key="frame" x="928" y="327" width="76" height="114"/>
-                                <state key="normal" image="Increment Sol Button"/>
+                                <state key="normal" image="Next Picture Button"/>
+                                <state key="selected" image="Next Picture Button Highlighted"/>
+                                <state key="highlighted" image="Next Picture Button Highlighted"/>
                                 <connections>
                                     <action selector="imageNavigationButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="jQt-7D-RGR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJU-aZ-Xxa">
                                 <rect key="frame" x="20" y="327" width="76" height="114"/>
-                                <state key="normal" image="Decrement Sol Button"/>
+                                <state key="normal" image="Previous Picture Button"/>
+                                <state key="selected" image="Previous Picture Button Highlighted"/>
+                                <state key="highlighted" image="Previous Picture Button Highlighted"/>
                                 <connections>
                                     <action selector="imageNavigationButtonTapped:" destination="dmH-9l-QK4" eventType="touchUpInside" id="KmO-bX-hBX"/>
                                 </connections>
@@ -544,14 +662,20 @@
         </scene>
     </scenes>
     <resources>
+        <image name="About Icon" width="56" height="56"/>
+        <image name="About Icon Highlighted" width="56" height="56"/>
         <image name="Button" width="208" height="112"/>
         <image name="Button Highlighted" width="208" height="112"/>
         <image name="Close Button" width="91" height="91"/>
         <image name="Close Button Highlighted" width="91" height="91"/>
         <image name="Decrement Sol Button" width="76" height="114"/>
-        <image name="Decrement Sol Button Highlighted" width="74" height="112"/>
+        <image name="Decrement Sol Button Highlighted" width="75" height="114"/>
         <image name="Increment Sol Button" width="76" height="114"/>
-        <image name="Increment Sol Button Highlighted" width="74" height="112"/>
+        <image name="Increment Sol Button Highlighted" width="75" height="114"/>
+        <image name="Next Picture Button" width="76" height="114"/>
+        <image name="Next Picture Button Highlighted" width="75" height="114"/>
+        <image name="Previous Picture Button" width="76" height="114"/>
+        <image name="Previous Picture Button Highlighted" width="75" height="114"/>
         <image name="Rover Icon A " width="103" height="86"/>
         <image name="Rover Icon B" width="103" height="86"/>
         <image name="Rover Icon C" width="103" height="86"/>
