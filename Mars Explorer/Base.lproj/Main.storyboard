@@ -64,7 +64,7 @@
                                                 <rect key="frame" x="0.0" y="3" width="152" height="108.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1k-Kh-73R">
-                                                        <rect key="frame" x="24" y="0.0" width="104.5" height="86"/>
+                                                        <rect key="frame" x="24.5" y="0.0" width="103" height="86"/>
                                                         <state key="normal" image="Rover Icon A "/>
                                                         <state key="selected" image="Rover Icon Selected"/>
                                                         <state key="highlighted" image="Rover Icon Selected"/>
@@ -72,8 +72,8 @@
                                                             <action selector="roverButtonTapped:" destination="JIk-9B-Nkc" eventType="touchUpInside" id="2Hq-Je-ivM"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curiousity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMv-2P-PEG">
-                                                        <rect key="frame" x="24" y="94" width="104.5" height="14.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curiosity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMv-2P-PEG">
+                                                        <rect key="frame" x="24.5" y="94" width="103" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="VenusRising-Regular" family="Venus Rising" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -171,7 +171,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="F4V-Lm-zOM">
-                                        <rect key="frame" x="221" y="76" width="271" height="155.5"/>
+                                        <rect key="frame" x="221" y="76.5" width="271" height="155.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yey-tm-1yw">
                                                 <rect key="frame" x="0.0" y="0.0" width="271" height="21.5"/>
@@ -380,6 +380,7 @@
                         <outlet property="roverSelectionPanelCenterYConstraint" destination="pl3-vI-abE" id="mnW-GB-vAC"/>
                         <outlet property="scifiSpinner" destination="dcZ-ZI-XsG" id="ONH-h5-hg7"/>
                         <outlet property="startButton" destination="ecm-75-JOc" id="iis-LI-AlZ"/>
+                        <outlet property="versionLabel" destination="4av-Cq-Avr" id="Zqf-rb-fr4"/>
                         <outletCollection property="roverButtons" destination="v1k-Kh-73R" collectionClass="NSMutableArray" id="gdl-Kx-WHm"/>
                         <outletCollection property="roverButtons" destination="vnH-g8-tVh" collectionClass="NSMutableArray" id="Se7-zD-eaM"/>
                         <outletCollection property="roverButtons" destination="stn-S7-rxV" collectionClass="NSMutableArray" id="8Wm-oA-OEn"/>

@@ -36,9 +36,11 @@ class ViewBuilder
     // Sets up the given view to have a translucent black background and a gradient border appropriate for this app
     static func setupTranslucentBlackViewWithGradientBorder(view: UIView)
     {
-        view.layer.borderColor = UIColor.clear.cgColor
+        view.layer.borderColor = UIColor(rgb: 0x32C1DF).cgColor
+        view.layer.borderWidth = 2.0
         view.backgroundColor = UIConstants.PANEL_BACKGROUND_COLOR
         
+        /*
         // gradient color
         let gradient = CAGradientLayer()
         gradient.masksToBounds = true
@@ -48,12 +50,13 @@ class ViewBuilder
         // apply gradient to outline of the view
         let shape = CAShapeLayer()
         shape.lineWidth = 2
-        shape.path = UIBezierPath(rect: view.bounds).cgPath
+        shape.path = UIBezierPath(rect: view.frame).cgPath
         shape.strokeColor = UIColor.black.cgColor
         shape.fillColor = UIColor.clear.cgColor
         gradient.mask = shape
         
         view.layer.addSublayer(gradient)
+        */
     }
     
     // Sets up the loading message view that contains a label for setting the message

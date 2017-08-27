@@ -8,29 +8,74 @@
 
 import XCTest
 
-class Mars_ExplorerUITests: XCTestCase {
-        
-    override func setUp() {
+class Mars_ExplorerUITests: XCTestCase
+{
+    // MARK:- Constants
+    
+    fileprivate let HOME_FIELD_TITLES = ["Landing Date", "Launch Date", "Status"]
+    fileprivate let CURIOSITY_MANIFEST_INFO = ["2012-08-06", "2011-11-26", "active"]
+    
+    // MARK:- Setup
+    
+    override func setUp()
+    {
         super.setUp()
         
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        // landscape mode only for this app
+        XCUIDevice.shared().orientation = .landscapeRight
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    // MARK:- Home VC Tests
+    
+    // Test out UI after start button tapped
+    func testStartExperience()
+    {
+        let app = XCUIApplication()
+        app.buttons["START"].tap()
+        
+        // wait for the rover panel to show up
+        waitForRoverPanel(app: app)
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    // Test out UI for selecting a rover
+    func testRoverSelection()
+    {
+        XCUIDevice.shared().orientation = .landscapeRight
+        
+        let app = XCUIApplication()
+        app.buttons["START"].tap()
+        
+        waitForRoverPanel(app: app)
+        app.buttons["Rover Icon A "].tap()
+        
+        // verify UI has changed and is visible
+        for i in 0 ... HOME_FIELD_TITLES.count - 1
+        {
+            let fieldtext = "\(HOME_FIELD_TITLES[i]): \(CURIOSITY_MANIFEST_INFO[i])"
+            XCTAssert(app.staticTexts[fieldtext].exists)
+        }
     }
     
+    // MARK:- Private Functions
+    
+    // Wait max for 10 seconds for the rover panel to show up
+    fileprivate func waitForRoverPanel(app: XCUIApplication)
+    {
+        var roverPanelVisible = false
+        var timeWaited = 0
+        
+        while !roverPanelVisible
+        {
+            if timeWaited >= 10 {
+                XCTFail("UI waiting too long for rover panel to show up")
+            }
+            
+            Thread.sleep(forTimeInterval: 1)
+            roverPanelVisible = (app.staticTexts["Curiosity"].exists && app.staticTexts["Opportunity"].exists && app.staticTexts["Spirit"].exists)
+            timeWaited += 1
+        }
+    }
 }

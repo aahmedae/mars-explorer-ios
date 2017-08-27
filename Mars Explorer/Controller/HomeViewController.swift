@@ -21,6 +21,7 @@ class HomeViewController: UIViewController
     @IBOutlet weak var exploreButton: UIButton!
     @IBOutlet weak var roverSelectionPanelCenterYConstraint: NSLayoutConstraint!
     @IBOutlet weak var aboutPanel: UIView!
+    @IBOutlet weak var versionLabel: UILabel!
     
     // MARK:- Variables
     
@@ -77,6 +78,7 @@ class HomeViewController: UIViewController
         
         // about panel
         ViewBuilder.setupTranslucentBlackViewWithGradientBorder(view: aboutPanel)
+        versionLabel.text = "Version: \(Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String)"
         aboutPanel.isHidden = true
     }
     
