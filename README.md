@@ -24,7 +24,7 @@ The app utlises the following frameworks and development methodologies:
 Swifty JSON is used for efficient JSON parsing
 
 * [NSURLSession]
-Bare-bones NSURLSession for networking and making HTTP REST requests. No theird-party library used.
+Bare-bones NSURLSession for networking and making HTTP REST requests. No third-party library used.
 
 * OOP in View Controllers
 Use of OOP to move generic functionality into parent view controllers. This makes the code easy to maintain and debug in child view controllers.
